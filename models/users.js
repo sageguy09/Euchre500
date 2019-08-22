@@ -6,6 +6,7 @@
 /* Step 1
  *
  * TODO: import mongoose connection
+ * NOTE: skip this if you are not using mongoose
  *
  */
 //const mongoose = require('./connection.js')
