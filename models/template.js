@@ -8,16 +8,8 @@
  * TODO: import mongoose connection
  *
  */
-//const mongoose = require('./connection.js')
+const mongoose = require('./connection.js')
 
-/* Step 1 alternative
- *
- * TODO: make a global variable to act as an in memory database. 
- * NOTE: doing this WILL NOT persist your data and you will loose
- * your data once you stop running your server.
- *
- */
-global.sampleModel = [];
 
 /* Step 2
  *
