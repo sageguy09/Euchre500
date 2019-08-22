@@ -1,7 +1,3 @@
-/* 
- * This is the template for a server.js file.  Follow the steps below and read
- * the comments for creating your own (or you can just copy this file).
- */
 
 /* Step 1
  *
