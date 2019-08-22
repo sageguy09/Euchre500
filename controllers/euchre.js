@@ -21,14 +21,20 @@ const euchreRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
+
+//get main test
+euchreRouter.get('/', (req, res) => {
+  res.send(usersApi.getHelloWorldString())
+})
+//get main/users test
 euchreRouter.get('/users', (req, res) => {
   res.send(usersApi.getHelloWorldString())
 })
-
+//get main/circuits test
 euchreRouter.get('/circuits', (req, res) => {
   res.send(circuitsApi.getHelloWorldString())
 })
-
+//get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
 })
