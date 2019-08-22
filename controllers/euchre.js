@@ -30,15 +30,15 @@ const euchreRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
-euchreRouter.get('/', (req, res) => {
+euchreRouter.get('/users', (req, res) => {
   res.send(usersApi.getHelloWorldString())
 })
 
-euchreRouter.get('/', (req, res) => {
+euchreRouter.get('/circuits', (req, res) => {
   res.send(circuitsApi.getHelloWorldString())
 })
 
-euchreRouter.get('/', (req, res) => {
+euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
 })
 /* Step 6
