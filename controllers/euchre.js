@@ -27,7 +27,7 @@ euchreRouter.get('/', (req, res) => {
   res.send(usersApi.getHelloWorldString())
 })
 //get main/users test
-euchreRouter.get('/users', (req, res) => {
+euchreRouter.get('/players', (req, res) => {
   res.send(usersApi.getHelloWorldString())
 })
 //get main/circuits test
