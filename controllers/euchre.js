@@ -4,7 +4,7 @@ const express = require('express')
 /* Step 2
  Import the api files from the models
  */
-const usersApi = require('../models/users.js')
+const usersApi = require('../models/players.js')
 const circuitsApi = require('../models/circuits.js')
 const resourcesApi = require('../models/resources.js')
 /* Step 3 

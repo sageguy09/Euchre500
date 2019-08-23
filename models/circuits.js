@@ -12,9 +12,10 @@ const mongoose = require('./connection.js')
 /* Step 2
  * TODO: create model schema 
  */
-//const SampleModelSchema = new mongoose.Schema({
-//  name: String
-//})
+const circuitSchema = new mongoose.Schema({
+  crctName: String,
+  
+})
 
 /* Step 3
  * TODO: create collection API
