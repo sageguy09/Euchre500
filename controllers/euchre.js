@@ -36,8 +36,8 @@ euchreRouter.get('/players', (req, res) => {
   //res.send(circuitsApi.getHelloWorldString())
 //})
 //*testing* create circuit handler
-euchreRouter.get("/newCircuit", (req, res) => {
-  res.send(circuitsApi.createCircuit)
+euchreRouter.get("/circuits/new", (req, res) => {
+  res.render('./circuits/newCrct');
 })
 //get all circuits
 euchreRouter.get('/circuits', (req, res) => {
