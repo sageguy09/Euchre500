@@ -4,7 +4,7 @@ const express = require('express')
 /* Step 2
  Import the api files from the models
  */
-const usersApi = require('../models/players.js')
+const playersApi = require('../models/players.js')
 const circuitsApi = require('../models/circuits.js')
 const resourcesApi = require('../models/resources.js')
 /* Step 3 
@@ -24,16 +24,19 @@ const euchreRouter = express.Router()
 
 //get main test
 euchreRouter.get('/', (req, res) => {
-  res.send(usersApi.getHelloWorldString())
+  res.send(playersApi.getHelloWorldString())
 })
+
 //get main/users test
 euchreRouter.get('/players', (req, res) => {
-  res.send(usersApi.getHelloWorldString())
+  res.send(playersApi.getHelloWorldString())
 })
 //get main/circuits test
 euchreRouter.get('/circuits', (req, res) => {
   res.send(circuitsApi.getHelloWorldString())
 })
+//test create handler
+
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
