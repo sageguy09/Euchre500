@@ -1,0 +1,9 @@
+<h1>All Circuits</h1>
+
+<ul>
+    {{#each circuits}}
+    <li><a href="/circuits/{{circuits._id}}"> {{crctName}}</a></li>
+    {{/each}}
+</ul>
+
+<a href="/circuits/newCrct">Click here to add a circuit</a>
