@@ -32,11 +32,19 @@ euchreRouter.get('/players', (req, res) => {
   res.send(playersApi.getHelloWorldString())
 })
 //get main/circuits test
-euchreRouter.get('/circuits', (req, res) => {
-  res.send(circuitsApi.getHelloWorldString())
+//euchreRouter.get('/circuits', (req, res) => {
+  //res.send(circuitsApi.getHelloWorldString())
+//})
+//*testing* create circuit handler
+euchreRouter.get("/newCircuit", (req, res) => {
+  res.send(circuitsApi.createCircuit)
 })
-//test create handler
-
+//get all circuits
+euchreRouter.get("/circuits", (req, res) => {
+  circuitsApi.getAllCircuits().then(circuits =>{
+    res.render('./circuits/allCrcts', {circuits})
+  })
+})
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
