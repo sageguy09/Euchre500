@@ -40,9 +40,15 @@ euchreRouter.get("/newCircuit", (req, res) => {
   res.send(circuitsApi.createCircuit)
 })
 //get all circuits
-euchreRouter.get("/circuits", (req, res) => {
+euchreRouter.get('/circuits', (req, res) => {
   circuitsApi.getAllCircuits().then(circuits =>{
     res.render('./circuits/allCrcts', {circuits})
+  })
+})
+//get circuit
+euchreRouter.get('/:circuitId', (req, res) => {
+  circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
+    res.render('./circuits/circuit', {circuit});
   })
 })
 //get main/resources test

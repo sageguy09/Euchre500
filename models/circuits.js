@@ -82,7 +82,7 @@ function createCircuit() {
   totalP1: 0,
   totalP2: 0,
   totalP3: 0,
-  totalP4: 0,
+  totalP4: 0
   })
 }
 function getAllCircuits() {
