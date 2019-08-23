@@ -58,7 +58,7 @@ function getHelloWorldString() {
 function createCircuit() {
   return CircuitCollection.create({
     crctName: "test circuit",
-  crcCreatedBy: "Ryan",
+  crctCreatedBy: "Ryan",
   nameP1: "Max",
   nameP2: "Tyler",
   nameP3: "Dana",
