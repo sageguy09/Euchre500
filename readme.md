@@ -11,7 +11,13 @@ How to play:
 
 
 ## Application developement project board available on GitKraken
- [Euchre500_Project_board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
+ ```[Euchre500_Project_board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)```
+ 
+ ## Page concept wireframe and entity relationship diagrams
+ 
+ ![Circuit WireFrame](https://imgur.com/GnwKj62.jpg)
+  ![Circuit ERD](https://imgur.com/Wdqaoe6.jpg)
+
 ## More instructions and application info coming soon!
 
 ##### General scoring concept and structure designed by the OG 2897 crew: Dana Henandez, Max Nommay, Tyler Ott, and Wes Ogden 
