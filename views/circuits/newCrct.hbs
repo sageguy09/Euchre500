@@ -1,16 +1,91 @@
 <h1>Create Circuit</h1>
 
 <div class='circuitDiv'>
-<form method="POST" action="/circuit/{{circuit._id}}?_method=PUT">
+{{!-- <form method="POST" action="/circuit/{{circuit._id}}?_method=PUT"></form> --}}
 
   <!--
     Template for creating input form for a string object key called stringMember
     NOTE: for numeric input fields use `type="number"`
   --->
-  <input type="text" value="{{circuit.crctName}}" placeholder="Name this Euchre500 circuit" name="crctName" />
+  <label for="crctName">Circuit Name</label>
+  <input type="text" placeholder="Name this Euchre500 circuit" name="crctName" />
 
-  <input type="checkbox" name="<TODO: model.booleanMember (e.g: account.isActive)" value="true" />
+  <label for="crcCreated">Created By</label>
+  <input type="text" placeholder="Enter your name" name="crcCreatedBy" />
 
-  <input type="submit" value="Create Shop" />
+  <label for="nameP1">Player Name 1</label>
+  <input type="text" placeholder="Enter Player Name" name="nameP1" />
+
+   <label for="nameP2">Player Name 1</label>
+  <input type="text" placeholder="Enter Player Name" name="nameP2" />
+
+   <label for="nameP3">Player Name 1</label>
+  <input type="text" placeholder="Enter Player Name" name="nameP3" />
+
+   <label for="nameP4">Player Name 1</label>
+  <input type="text" placeholder="Enter Player Name" name="nameP4" />
+
+   <label for="scoreP1">Player 1 Score</label>
+  <input type="text" value=0 name="scoreP1" />
+
+  <label for="scoreP2">Player 2 Score</label>
+  <input type="text" value=0 name="scoreP2" />
+
+    <label for="scoreP3">Player 3 Score</label>
+  <input type="text" value=0 name="scoreP3" />
+
+    <label for="scoreP4">Player 4 Score</label>
+  <input type="text" value=0 name="scoreP4" />
+
+    <label for="marchP1">Player 1 Marches</label>
+  <input type="text" value=0 name="marchP1" />
+
+    <label for="marchP2">Player 2 Marches</label>
+  <input type="text" value=0 name="marchP2" />
+
+  <label for="marchP3">Player 3 Marches</label>
+  <input type="text" value=0 name="marchP3" />
+
+  <label for="marchP4">Player 4 Marches</label>
+  <input type="text" value=0 name="marchP4" />
+
+  <label for="winsP1">Player 1 Wins</label>
+  <input type="text" value=0 name="winsP1" />
+
+  <label for="winsP2">Player 2 Wins</label>
+  <input type="text" value=0 name="winsP2" />
+
+  <label for="winsP3">Player 3 Wins</label>
+  <input type="text" value=0 name="winsP3" />
+
+  <label for="winsP4">Player 4 Wins</label>
+  <input type="text" value=0 name="winsP4" />
+
+    <label for="lossP1">Player 1 Losses</label>
+  <input type="text" value=0 name="lossP1" />
+
+    <label for="lossP2">Player 2 Losses</label>
+  <input type="text" value=0 name="lossP2" />
+
+    <label for="lossP3">Player 3 Losses</label>
+  <input type="text" value=0 name="lossP3" />
+
+   <label for="lossP4">Player 4 Losses</label>
+  <input type="text" value=0 name="lossP4" />
+
+     <label for="totalP1">Player 1 Total</label>
+  <input type="text" value=0 name="totalP1" />
+
+       <label for="totalP2">Player 2 Total</label>
+  <input type="text" value=0 name="totalP2" />
+
+         <label for="totalP3">Player 3 Total</label>
+  <input type="text" value=0 name="totalP3" />
+
+         <label for="totalP4">Player 4 Total</label>
+  <input type="text" value=0 name="totalP4" />
+
+
+  <input type="submit" value="Create Circuit" />
 </form>
 </div>
