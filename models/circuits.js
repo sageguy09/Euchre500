@@ -10,18 +10,41 @@ const mongoose = require('./connection.js')
 
 
 /* Step 2
- * TODO: create model schema 
+ * create model schema 
  */
-const circuitSchema = new mongoose.Schema({
+const CircuitSchema = new mongoose.Schema({
   crctName: String,
-  
+  crcCreatedBy: String,
+  nameP1: String,
+  nameP2: String,
+  nameP3: String,
+  nameP4: String,
+  scoreP1: Number,
+  scoreP2: Number,
+  scoreP3: Number,
+  scoreP4: Number,
+  marchP1: Number,
+  marchP2: Number,
+  marchP3: Number,
+  marchP4: Number,
+  winsP1: Number,
+  winsP2: Number,
+  winsP3: Number,
+  winsP4: Number,
+  lossP1: Number,
+  lossP2: Number,
+  lossP3: Number,
+  lossP4: Number,
+  totalP1: Number,
+  totalP2: Number,
+  totalP3: Number,
+  totalP4: Number,
 })
 
 /* Step 3
  * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
  */
-//const SampleCollection = mongoose.model('Sample', SampleModelSchema)
+const CircuitCollection = mongoose.model('circuit', CircuitSchema)
 
 /* Step 4
  *
