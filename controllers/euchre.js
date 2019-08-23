@@ -36,17 +36,26 @@ euchreRouter.get('/players', (req, res) => {
   //res.send(circuitsApi.getHelloWorldString())
 //})
 //*testing* create circuit handler
-euchreRouter.get("/circuits/new", (req, res) => {
-  res.render('./circuits/newCrct');
-})
 //get all circuits
 euchreRouter.get('/circuits', (req, res) => {
   circuitsApi.getAllCircuits().then(circuits =>{
     res.render('./circuits/allCrcts', {circuits})
   })
 })
+//post handler for newCrct
+euchreRouter.post('/circuits/', (req, res) =>{
+  circuitsApi.addNewCircuit(req.body).then( addedCircuit => {
+    res.redirect('/sitemain/circuits')
+  })
+})
+
+//render newCrct view
+euchreRouter.get("/circuits/new", (req, res) => {
+  res.render('./circuits/newCrct');
+})
+
 //get circuit
-euchreRouter.get('/:circuitId', (req, res) => {
+euchreRouter.get('/circuits/:circuitId', (req, res) => {
   circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
     res.render('./circuits/circuit', {circuit});
   })
