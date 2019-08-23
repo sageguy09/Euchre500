@@ -1,6 +1,6 @@
 # Euchre500
 
-# A web application designed to allow Euchre groups to keep track of there Euchre stats while introducing another competitive aspect: a race to hit an overall score of 500 points!
+## A web application designed to allow Euchre groups to keep track of there Euchre stats while introducing another competitive aspect: a race to hit an overall score of 500 points!
 
 How to play:
 
@@ -10,3 +10,5 @@ How to play:
 4. Click submit to push the current round scores to the Circuit totals
 
 ## More instructions and application info coming soon!
+
+##### General scoring concept and structure designed by the OG 2897 crew: Dana Henandez, Max Nommay, Tyler Ott, and Wes Ogden 
