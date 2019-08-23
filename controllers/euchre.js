@@ -31,27 +31,30 @@ euchreRouter.get('/', (req, res) => {
 euchreRouter.get('/players', (req, res) => {
   res.send(playersApi.getHelloWorldString())
 })
-//get main/circuits test
-//euchreRouter.get('/circuits', (req, res) => {
-  //res.send(circuitsApi.getHelloWorldString())
-//})
-//*testing* create circuit handler
+//render newCrct view
+euchreRouter.get("/circuits/new", (req, res) => {
+  res.render('./circuits/newCrct');
+})
+
 //get all circuits
 euchreRouter.get('/circuits', (req, res) => {
   circuitsApi.getAllCircuits().then(circuits =>{
     res.render('./circuits/allCrcts', {circuits})
   })
 })
-//post handler for newCrct
-euchreRouter.post('/circuits/', (req, res) =>{
-  circuitsApi.addNewCircuit(req.body).then( addedCircuit => {
-    res.redirect('/sitemain/circuits')
-  })
-})
 
-//render newCrct view
-euchreRouter.get("/circuits/new", (req, res) => {
-  res.render('./circuits/newCrct');
+
+//post handler for newCrct
+euchreRouter.post('/circuits/addedCircuit', (req, res) =>{
+  circuitsApi.addNewCircuit(req.body).then( addedcircuit => {
+   //circuitsApi.getCircuit(addedcircuit).then( => {
+     //res.redirect("/circuits/"+circuit.)
+     console.log(req.body.nameP1)
+
+    
+    //res.render('./circuits/circuit', {circuit});
+  
+  })
 })
 
 //get circuit
@@ -60,6 +63,7 @@ euchreRouter.get('/circuits/:circuitId', (req, res) => {
     res.render('./circuits/circuit', {circuit});
   })
 })
+
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())

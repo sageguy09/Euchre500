@@ -109,6 +109,10 @@ function getCircuit(circuitId) {
   return CircuitCollection.findById(circuitId)
 }
 
+
+function getCircuitId(addedCircuit) {
+  return CircuitCollection.findById(circuitId)
+}
 function addNewCircuit(circuitId) {
   return CircuitCollection.insertMany([circuitId])
 }
