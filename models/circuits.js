@@ -55,11 +55,38 @@ function getHelloWorldString() {
   return 'hello world'
 }
 
+function getAllCircuits() {
+  return CircuitCollection.find()
+}
+
+function getCircuit(circuitId) {
+  return CircuitCollection.findById(circuitId)
+}
+
+function addNewCircuit(circuitId) {
+  return CircuitCollection.insertMany([circuitId])
+}
+
+function deleteCircuit(circuitId) {
+  return CircuitCollection.findByIdAndDelete(circuitId)
+}
+
+function updateCircuit(circuitId, circuit) {
+  return CircuitCollection.findByIdAndUpdate(circuitId, circuit)
+}
+
+
+
 /* Step 5
  *
  * TODO: export all functions from this file by adding their names as keys to this
  * object
  */
 module.exports = {
-  getHelloWorldString
+  addNewCircuit,
+  deleteCircuit,
+  getHelloWorldString,
+  getAllCircuits,
+  getCircuit,
+  updateCircuit
 }
