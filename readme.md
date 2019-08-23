@@ -11,7 +11,7 @@ How to play:
 
 
 ## Application developement project board available on GitKraken
- [Euchre500_Project_board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
+ [Euchre500_Project_Board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
  
  ## Page concept wireframe and entity relationship diagrams
  
