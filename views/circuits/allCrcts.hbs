@@ -1,5 +1,7 @@
-<h1>All Circuits</h1>
-<div container="circuitsMain">
+<h1>Circuits</h1>
+
+<container class="circuitsMain">
+<h3 class="sidebarList">All Circuits</h3>
 <ul>
     {{#each circuits}}
     <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
@@ -7,4 +9,4 @@
 </ul>
 
 <a href="/sitemain/circuits/new">Click here to add a circuit</a>
-</div>
+</container>
