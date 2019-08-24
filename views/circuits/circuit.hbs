@@ -1,44 +1,49 @@
 <h1>Circuit: {{circuit._id}}</h1>
 
 <div>
-    <p>name:{{circuit.crctName}}</p>
+  {{!-- header --}}
+  <p>name:{{circuit.crctName}}</p>
   <p>created by: {{circuit.crctCreatedBy}}</p>
+  {{!-- player1 --}}
   <p>nameP1: {{circuit.nameP1}}</p>
-  <p>nameP2: {{circuit.nameP2}}</p>
-  <p>nameP3: {{circuit.nameP3}}</p>
-  <p>nameP4: {{circuit.nameP4}}</p>
   <p>scoreP1: {{circuit.scoreP1}}</p>
-  <p>scoreP2: {{circuit.scoreP2}}</p>
-  <p>scoreP3: {{circuit.scoreP3}}</p>
-  <p>scoreP4: {{circuit.scoreP4}}</p>
   <p>marchp1: {{circuit.marchP1}}</p>
-  <p>marchp2: {{circuit.marchP2}}</p>
-  <p>marchp3: {{circuit.marchP3}}</p>
-  <p>marchp4: {{circuit.marchP4}}</p>
   <p>euchreP1: {{circuit.euchreP1}}</p>
-  <p>euchreP2: {{circuit.euchreP2}}</p>
-  <p>euchreP3: {{circuit.euchreP3}}</p>
-  <p>euchreP4: {{circuit.euchreP4}}</p>
   <p>loanerP1: {{circuit.euchreP1}}</p>
-  <p>euchreP2: {{circuit.euchreP2}}</p>
-  <p>euchreP3: {{circuit.euchreP3}}</p>
-  <p>euchreP4: {{circuit.euchreP4}}</p>
   <p>loanerP1: {{circuit.loanerP1}}</p>
-  <p>loanerP2: {{circuit.loanerP2}}</p>
-  <p>loanerP3: {{circuit.loanerP3}}</p>
-  <p>loanerP4: {{circuit.loanerP4}}</p>
   <p>winsP1: {{circuit.winsP1}}</p>
-  <p>winsP2: {{circuit.winsP2}}</p>
-  <p>winsP3: {{circuit.winsP3}}</p>
-  <p>winsP4: {{circuit.winsP4}}</p>
   <p>lossP1: {{circuit.lossP1}}</p>
-  <p>lossP2: {{circuit.lossP2}}</p>
-  <p>lossP3: {{circuit.lossP3}}</p>
-  <p>lossP4: {{circuit.lossP4}}</p>
   <p>totalP1: {{circuit.totalP1}}</p>
+  {{!-- player2 --}}
+  <p>nameP2: {{circuit.nameP2}}</p>
+  <p>scoreP2: {{circuit.scoreP2}}</p>
+  <p>marchp2: {{circuit.marchP2}}</p>
+  <p>euchreP2: {{circuit.euchreP2}}</p>
+  <p>euchreP2: {{circuit.euchreP2}}</p>
+  <p>loanerP2: {{circuit.loanerP2}}</p>
+  <p>winsP2: {{circuit.winsP2}}</p>
+  <p>lossP2: {{circuit.lossP2}}</p>
   <p>totalP2: {{circuit.totalP2}}</p>
+  {{!-- player3 --}}
+  <p>nameP3: {{circuit.nameP3}}</p>
+  <p>scoreP3: {{circuit.scoreP3}}</p>
+  <p>marchp3: {{circuit.marchP3}}</p>
+  <p>euchreP3: {{circuit.euchreP3}}</p>
+  <p>euchreP3: {{circuit.euchreP3}}</p>
+  <p>loanerP3: {{circuit.loanerP3}}</p>
+  <p>winsP3: {{circuit.winsP3}}</p> 
+  <p>lossP3: {{circuit.lossP3}}</p>
   <p>totalP3: {{circuit.totalP3}}</p>
+  {{!-- player4 --}}
+  <p>nameP4: {{circuit.nameP4}}</p>
+  <p>scoreP4: {{circuit.scoreP4}}</p>
+  <p>marchp4: {{circuit.marchP4}}</p>
+  <p>euchreP4: {{circuit.euchreP4}}</p>
+  <p>euchreP4: {{circuit.euchreP4}}</p>
+  <p>loanerP4: {{circuit.loanerP4}}</p>
+  <p>winsP4: {{circuit.winsP4}}</p>
+  <p>lossP4: {{circuit.lossP4}}</p>
   <p>totalP4: {{circuit.totalP4}}</p>
-  </br>
+</br>
   <a  href="/sitemain/circuits/{{circuit._id}}/edit">Edit Issue</a>
 </div>
