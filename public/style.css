@@ -1,6 +1,53 @@
-.circuitList {
-    display: block;
+.clearfix {
+    overflow: auto;
 }
-.circuitList ul {
+
+.table {
+    border: 1px solid;
+    
+  }
+  .head {
+    display: block;
+    text-align: center;
+    }
+  .tr {
+    display: flex;
+  }
+  
+  .th, .td {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    padding: px 8px;
+    flex: 1;
+  }
+  
+  
+  .th {
+    font-weight: bold;
+    text-align: center;
+  }
+  .th[role="rowheader"] {
+    background-color: lightgreen;
+  }
+  .th[role="columnheader"] {
+    background-color: lightpink;
+  }
+  
+
+.sideList {
+    float: right;
+    display: flex;
+
+}
+.sideList ul {
+    flex: 1 1 auto;
     list-style-type: none;
+}
+
+.circuitButtons{
+    
+    float: left;
+    display: flex;
+    flex-direction: column;
+    
 }

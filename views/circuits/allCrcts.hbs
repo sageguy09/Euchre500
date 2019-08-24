@@ -1,15 +1,351 @@
 <h1>Circuits</h1>
 
-<container class="circuitsMain">
-
-<div class="circuitList">
-<h3 class="listheader">All Circuits</h3>
-<ul>
-    {{#each circuits}}
-    <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
-    {{/each}}
-</ul>
-<a href="/sitemain/circuits/new">Click here to add a circuit</a>
-</div>
-
+<container class="circuitsMain" "clearfix">
+    <container class="circuitBoard">
+        <div aria-label="circuit"
+            aria-describedby="caption" class="table" role="grid"
+        >
+            <h1 class="head">Cirucit</h1>
+            <div class="tr" role="row">
+        
+                <div class="th" role="columnheader">
+                Player
+                </div>
+                <div class="th" role="columnheader">
+                Score
+                </div>
+                <div class="th" role="columnheader">
+                Loaners
+                </div>
+                <div class="th" role="columnheader">
+                Euchres
+                </div>
+                <div class="th" role="columnheader">
+                Marches
+                </div>
+                <div class="th" role="columnheader">
+                Wins
+                </div>
+                <div class="th" role="columnheader">
+                Losses
+                </div>
+                <div class="th" role="columnheader">
+                Total
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (player1)
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (player1)
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (player1)
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (player1)
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+        </div>
+    </container>
+    <container class="circuitBoard">
+        <div aria-label="circuit"
+            aria-describedby="caption" class="table" role="grid"
+        >
+            <h1 class="head">Round Scoring</h1>
+            <div class="tr" role="row">
+        
+                <div class="th" role="columnheader">
+                Teams
+                </div>
+                <div class="th" role="columnheader">
+                Score
+                </div>
+                <div class="th" role="columnheader">
+                Loaners
+                </div>
+                <div class="th" role="columnheader">
+                Euchres
+                </div>
+                <div class="th" role="columnheader">
+                Marches
+                </div>
+                <div class="th" role="columnheader">
+                Wins
+                </div>
+                <div class="th" role="columnheader">
+                Losses
+                </div>
+                <div class="th" role="columnheader">
+                Total
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team1):P1+P2
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team2):P3+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team3):P1+P3
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team4):P2+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team5):P1+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (teams6):P2+P3
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+        </div>
+    </container>
+    <wrapper class="sideList">
+        <div class="circuitList">
+            <h3 class="listheader">All Circuits</h3>
+                <ul>
+                    {{#each circuits}}
+                    <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/circuits/new">Click here to add a circuit</a>
+        </div>
+    </wrapper>
+    <div class="circuitButtons">
+        <button id="start">Start</button>
+        <button id="resume">Resume</button>
+        <button id="save">Save</button>
+        <button id="delete">Delete</button>
+        <button id="start">Add Player</button>
+        <button id="submitRound">Submit Round</button>
+    </div>
 </container>
