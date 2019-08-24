@@ -42,7 +42,7 @@ euchreRouter.get('/circuits', (req, res) => {
     res.render('./circuits/allCrcts', {circuits})
   })
 })
-//post handler for newCrct
+//post handler for newCrct - redirect to single circuit view
 euchreRouter.post('/circuits/addedCircuit', (req, res) =>{
   circuitsApi.addNewCircuit(req.body).then( newCircuit => {
      /*circuitsApi.getCircuitByName(newCircuit).then(circuit => {
@@ -52,19 +52,23 @@ euchreRouter.post('/circuits/addedCircuit', (req, res) =>{
      res.redirect('/sitemain/circuits/')
   })
 })
-
-
-//get main/resources test
-euchreRouter.get('/resources', (req, res) => {
-  res.send(resourcesApi.getHelloWorldString())
-})
-
-//get circuit
+//get single circuit
 euchreRouter.get('/circuits/:circuitId', (req, res) => {
   circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
     res.render('./circuits/circuit', {circuit});
   })
 })
+euchreRouter.put('/:circuitId', (req, res) => {
+  circuitsApi.updateCircuit(req.params.circuitId, req.body).then( circuit => {
+    res.redirect('/sitemain/circuits/' + req.params.circuitId);
+  })
+})
+//get main/resources test
+euchreRouter.get('/resources', (req, res) => {
+  res.send(resourcesApi.getHelloWorldString())
+})
+
+
 
 
 /* Step 6

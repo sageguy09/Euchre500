@@ -1,7 +1,7 @@
-<h1>Resume Circuit</h1>
+<h1>Resume Circuit {{circuit.id}}</h1>
 
-<div class='circuitDiv'>
-{{!-- <form method="POST" action="/circuit/{{circuit._id}}?_method=PUT"></form> --}}
+<div class='circuitDiv' id='existingCircuit'>
+<form method="POST" action="sitemain/circuits/{{circuit._id}}?_method=PUT">
 
   <!--
     Template for creating input form for a string object key called stringMember
@@ -9,13 +9,13 @@
   --->
   {{!-- circuit name/id --}}
   <label for="crctName">Circuit Name</label>
-  <input type="text" placeholder="Name this Euchre500 circuit" name="crctName" />
+  <input type="text" value="{{circuit.Name}}" name="crctName" />
 {{!-- player names --}}
   <label for="crctCreated">Created By</label>
-  <input type="text" placeholder="Enter your name" name="crcCreatedBy" />
+  <input type="text" value="{{circuit.Created}}" name="crcCreatedBy" />
 
   <label for="nameP1">Player Name 1</label>
-  <input type="text" placeholder="Enter Player Name" name="nameP1" />
+  <input type="text" value="{{circuit.nameP1}}" name="nameP1" />
 
    <label for="nameP2">Player Name 2</label>
   <input type="text" placeholder="Enter Player Name" name="nameP2" />
