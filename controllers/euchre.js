@@ -27,10 +27,7 @@ euchreRouter.get('/', (req, res) => {
   res.send(playersApi.getHelloWorldString())
 })
 
-//get main/users test
-euchreRouter.get('/players', (req, res) => {
-  res.send(playersApi.getHelloWorldString())
-})
+
 //render newCrct view
 euchreRouter.get("/circuits/new", (req, res) => {
   res.render('./circuits/newCrct');
@@ -63,11 +60,17 @@ euchreRouter.put('/:circuitId', (req, res) => {
     res.redirect('/sitemain/circuits/' + req.params.circuitId);
   })
 })
+/*
+comment out until ready to implement
+//get main/users test
+euchreRouter.get('/players', (req, res) => {
+  res.send(playersApi.getHelloWorldString())
+})
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
 })
-
+*/
 
 
 
