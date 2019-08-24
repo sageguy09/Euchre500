@@ -46,8 +46,8 @@ const CircuitSchema = new mongoose.Schema({
   totalP1: Number,
   totalP2: Number,
   totalP3: Number,
-  totalP4: Number,
-})
+  totalP4: Number
+});
 
 /* Step 3
  * TODO: create collection API
