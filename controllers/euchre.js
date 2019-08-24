@@ -42,16 +42,21 @@ euchreRouter.get('/circuits', (req, res) => {
     res.render('./circuits/allCrcts', {circuits})
   })
 })
-
-
 //post handler for newCrct
 euchreRouter.post('/circuits/addedCircuit', (req, res) =>{
   circuitsApi.addNewCircuit(req.body).then( newCircuit => {
-     circuitsApi.getCircuitByName(newCircuit).then(circuit => {
+     /*circuitsApi.getCircuitByName(newCircuit).then(circuit => {
        //console.log(circuit.id)
-       res.redirect('/sitemain/circuits/' + circuit.id)
-     })
+       
+     })*/
+     res.redirect('/sitemain/circuits/')
   })
+})
+
+
+//get main/resources test
+euchreRouter.get('/resources', (req, res) => {
+  res.send(resourcesApi.getHelloWorldString())
 })
 
 //get circuit
@@ -61,10 +66,7 @@ euchreRouter.get('/circuits/:circuitId', (req, res) => {
   })
 })
 
-//get main/resources test
-euchreRouter.get('/resources', (req, res) => {
-  res.send(resourcesApi.getHelloWorldString())
-})
+
 /* Step 6
  * Export the router from the file.
  */

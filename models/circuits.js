@@ -115,11 +115,13 @@ function getCircuitId(addedCircuit) {
 }
 */
 
-function getCircuitByName(circuitName){
-  return CircuitCollection.findOne(circuitName.name)
-}
+
 function addNewCircuit(newCircuit) {
   return CircuitCollection.insertMany(newCircuit);
+}
+
+function getCircuitByName(circuitName){
+  return CircuitCollection.findOne(circuitName.name)
 }
 
 function deleteCircuit(circuitId) {
