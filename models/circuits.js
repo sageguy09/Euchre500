@@ -106,7 +106,7 @@ function getAllCircuits() {
 }
 
 function getCircuit(circuitId) {
-  return CircuitCollection.findById(circuitId)
+  return CircuitCollection.findById(circuitId);
 }
 
 /*

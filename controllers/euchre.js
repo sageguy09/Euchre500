@@ -62,8 +62,8 @@ euchreRouter.put('/:circuitId', (req, res) => {
   })
 })
 
-euchreRouter.get('/:circuitId/edit', (req, res) => {
-  circuitsApi.getCircuit(req.params.circuitID).then(circuit => {
+euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
+  circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
     res.render('./circuits/updateCrct', {circuit});
   })
 })
