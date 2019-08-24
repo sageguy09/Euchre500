@@ -55,9 +55,16 @@ euchreRouter.get('/circuits/:circuitId', (req, res) => {
     res.render('./circuits/circuit', {circuit});
   })
 })
+//put handler to update an existing circuit - redirect to single circuit view
 euchreRouter.put('/:circuitId', (req, res) => {
   circuitsApi.updateCircuit(req.params.circuitId, req.body).then( circuit => {
     res.redirect('/sitemain/circuits/' + req.params.circuitId);
+  })
+})
+
+euchreRouter.get('/:circuitId/edit', (req, res) => {
+  circuitsApi.getCircuit(req.params.circuitID).then(circuit => {
+    res.render('./circuits/updateCrct', {circuit});
   })
 })
 /*

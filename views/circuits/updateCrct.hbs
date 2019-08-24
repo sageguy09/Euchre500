@@ -1,4 +1,4 @@
-<h1>Resume Circuit {{circuit.id}}</h1>
+<h1>Resume Circuit {{circuit._id}}</h1>
 
 <div class='circuitDiv' id='existingCircuit'>
 <form method="POST" action="sitemain/circuits/{{circuit._id}}?_method=PUT">
@@ -111,6 +111,7 @@
   <input type="text" value=0 name="totalP4" />
 
 {{!-- submit new circuit --}}
-  <input type="submit" value="Create Circuit" />
+  <input type="submit" value="Update Circuit" />
 </form>
+
 </div>
