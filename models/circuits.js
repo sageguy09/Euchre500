@@ -14,7 +14,7 @@ const mongoose = require('./connection.js')
  */
 const CircuitSchema = new mongoose.Schema({
   crctName: String,
-  crcCreatedBy: String,
+  crctCreatedBy: String,
   nameP1: String,
   nameP2: String,
   nameP3: String,
@@ -109,12 +109,17 @@ function getCircuit(circuitId) {
   return CircuitCollection.findById(circuitId)
 }
 
-
+/*
 function getCircuitId(addedCircuit) {
-  return CircuitCollection.findById(circuitId)
+  return CircuitCollection.findOne(added)
 }
-function addNewCircuit(circuitId) {
-  return CircuitCollection.insertMany([circuitId])
+*/
+
+function getCircuitByName(circuitName){
+  return CircuitCollection.findOne(circuitName.name)
+}
+function addNewCircuit(newCircuit) {
+  return CircuitCollection.insertMany(newCircuit);
 }
 
 function deleteCircuit(circuitId) {
@@ -136,6 +141,7 @@ module.exports = {
   addNewCircuit,
   createCircuit,
   deleteCircuit,
+  getCircuitByName,
   getHelloWorldString,
   getAllCircuits,
   getCircuit,

@@ -46,14 +46,11 @@ euchreRouter.get('/circuits', (req, res) => {
 
 //post handler for newCrct
 euchreRouter.post('/circuits/addedCircuit', (req, res) =>{
-  circuitsApi.addNewCircuit(req.body).then( addedcircuit => {
-   //circuitsApi.getCircuit(addedcircuit).then( => {
-     //res.redirect("/circuits/"+circuit.)
-     console.log(req.body.nameP1)
-
-    
-    //res.render('./circuits/circuit', {circuit});
-  
+  circuitsApi.addNewCircuit(req.body).then( newCircuit => {
+     circuitsApi.getCircuitByName(newCircuit).then(circuit => {
+       //console.log(circuit.id)
+       res.redirect('/sitemain/circuits/' + circuit.id)
+     })
   })
 })
 
