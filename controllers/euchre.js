@@ -56,7 +56,7 @@ euchreRouter.get('/circuits/:circuitId', (req, res) => {
   })
 })
 //put handler to update an existing circuit - redirect to single circuit view
-euchreRouter.put('/:circuitId', (req, res) => {
+euchreRouter.put('/circuits/:circuitId', (req, res) => {
   circuitsApi.updateCircuit(req.params.circuitId, req.body).then( circuit => {
     res.redirect('/sitemain/circuits/' + req.params.circuitId);
   })
