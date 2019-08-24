@@ -1,53 +1,5 @@
-<h1>Circuit: {{circuit._id}}</h1>
+<h1>Single Circuit View: {{circuit._id}}</h1>
 
-<div>
-  {{!-- header --}}
-  <p>name:{{circuit.crctName}}</p>
-  <p>created by: {{circuit.crctCreatedBy}}</p>
-  {{!-- player1 --}}
-  <p>nameP1: {{circuit.nameP1}}</p>
-  <p>scoreP1: {{circuit.scoreP1}}</p>
-  <p>marchp1: {{circuit.marchP1}}</p>
-  <p>euchreP1: {{circuit.euchreP1}}</p>
-  <p>loanerP1: {{circuit.euchreP1}}</p>
-  <p>loanerP1: {{circuit.loanerP1}}</p>
-  <p>winsP1: {{circuit.winsP1}}</p>
-  <p>lossP1: {{circuit.lossP1}}</p>
-  <p>totalP1: {{circuit.totalP1}}</p>
-  {{!-- player2 --}}
-  <p>nameP2: {{circuit.nameP2}}</p>
-  <p>scoreP2: {{circuit.scoreP2}}</p>
-  <p>marchp2: {{circuit.marchP2}}</p>
-  <p>euchreP2: {{circuit.euchreP2}}</p>
-  <p>euchreP2: {{circuit.euchreP2}}</p>
-  <p>loanerP2: {{circuit.loanerP2}}</p>
-  <p>winsP2: {{circuit.winsP2}}</p>
-  <p>lossP2: {{circuit.lossP2}}</p>
-  <p>totalP2: {{circuit.totalP2}}</p>
-  {{!-- player3 --}}
-  <p>nameP3: {{circuit.nameP3}}</p>
-  <p>scoreP3: {{circuit.scoreP3}}</p>
-  <p>marchp3: {{circuit.marchP3}}</p>
-  <p>euchreP3: {{circuit.euchreP3}}</p>
-  <p>euchreP3: {{circuit.euchreP3}}</p>
-  <p>loanerP3: {{circuit.loanerP3}}</p>
-  <p>winsP3: {{circuit.winsP3}}</p> 
-  <p>lossP3: {{circuit.lossP3}}</p>
-  <p>totalP3: {{circuit.totalP3}}</p>
-  {{!-- player4 --}}
-  <p>nameP4: {{circuit.nameP4}}</p>
-  <p>scoreP4: {{circuit.scoreP4}}</p>
-  <p>marchp4: {{circuit.marchP4}}</p>
-  <p>euchreP4: {{circuit.euchreP4}}</p>
-  <p>euchreP4: {{circuit.euchreP4}}</p>
-  <p>loanerP4: {{circuit.loanerP4}}</p>
-  <p>winsP4: {{circuit.winsP4}}</p>
-  <p>lossP4: {{circuit.lossP4}}</p>
-  <p>totalP4: {{circuit.totalP4}}</p>
-
-</br>
-  <a  href="/sitemain/circuits/{{circuit._id}}/edit">Edit Issue</a>
-</div>
 
 <container class="circuitsMain" "clearfix">
     <container class="circuitBoard" id="circuitScore">
@@ -83,107 +35,107 @@
                 </div>
             </div>
             <div class="tr" role="row">
-                <div class="th" role="rowheader">
-                (player1)
+                <div class="th" role="rowheader" id="nameP1">
+                {{circuit.nameP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="scoreP1">
+                {{circuit.scoreP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="loanerP1">
+                {{circuit.loanerP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="euchreP1">
+                {{circuit.euchreP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="marchP1">
+                {{circuit.marchP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="winsP1">
+                {{circuit.winsP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="lossP1">
+                {{circuit.lossP1}}
                 </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-            </div>
-            <div class="tr" role="row">
-                <div class="th" role="rowheader">
-                (player1)
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
-                </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="totalP1">
+                {{circuit.totalP1}}
                 </div>
             </div>
             <div class="tr" role="row">
-                <div class="th" role="rowheader">
-                (player1)
+                <div class="th" role="rowheader" id="nameP2">
+                {{circuit.nameP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="scoreP2">
+                {{circuit.scoreP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="loanerP2">
+                {{circuit.loanerP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="euchreP2">
+                {{circuit.euchreP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="marchP2">
+                {{circuit.marchP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="winsP2">
+                {{circuit.winsP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="lossP2">
+                {{circuit.lossP2}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="totalP2">
+                {{circuit.totalP2}}
                 </div>
             </div>
             <div class="tr" role="row">
-                <div class="th" role="rowheader">
-                (player1)
+                <div class="th" role="rowheader" id="nameP3">
+                {{circuit.nameP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="scoreP3">
+                {{circuit.scoreP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="loanerP3">
+                {{circuit.loanerP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="euchreP3">
+                {{circuit.euchreP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="marchP3">
+                {{circuit.marchP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="winsP3">
+                {{circuit.winsP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="lossP3">
+                {{circuit.lossP3}}
                 </div>
-                <div class="td" role="gridcell">
-                
+                <div class="td" role="gridcell" id="totalP3">
+                {{circuit.totalP3}}
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader" id="nameP4">
+                {{circuit.nameP4}}
+                </div>
+                <div class="td" role="gridcell" id="scoreP4">
+                {{circuit.scoreP4}}
+                </div>
+                <div class="td" role="gridcell" id="loanerP4">
+                {{circuit.loanerP4}}
+                </div>
+                <div class="td" role="gridcell" id="euchreP4">
+                {{circuit.euchreP4}}
+                </div>
+                <div class="td" role="gridcell" id="marchP4">
+                {{circuit.marchP4}}
+                </div>
+                <div class="td" role="gridcell" id="winsP4">
+                {{circuit.winsP4}}
+                </div>
+                <div class="td" role="gridcell" id="lossP4">
+                {{circuit.lossP4}}
+                </div>
+                <div class="td" role="gridcell" id="totalP4">
+                {{circuit.totalP4}}
                 </div>
             </div>
         </div>
@@ -398,3 +350,5 @@
         <button id="submitRound">Submit Round</button>
     </div>
 </container>
+
+<a  href="/sitemain/circuits/{{circuit._id}}/edit">Edit Issue</a>
