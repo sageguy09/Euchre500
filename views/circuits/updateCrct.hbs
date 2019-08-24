@@ -113,5 +113,8 @@
 {{!-- submit new circuit --}}
   <input type="submit" value="Update Circuit" />
 </form>
+<form method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=DELETE">
+<input type="submit" value="Delete Circuit" />
+</form>
 
 </div>
