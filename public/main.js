@@ -35,20 +35,24 @@ pValue += i
 
 function submitRound (){
     event.preventDefault();
-    let player = 'P1'
+    //let player = 'P1'
     for (p = 0; p<=2; p++){
-        for (i = 0; i<6; i++){
-            var total = 0;
-            var p1Score = parseFloat(document.getElementById('t1Score').value);
-            var p1p2Score = parseFloat(document.getElementById(valueFields[i]+players[p]).value)
-            total += p1Score
-            total += p1p2Score
-            //console.log(valueFields[i]+player)
-            //this function worked for updating when player set to P1
-            document.getElementById(valueFields[i]+players[p]).value = (total);
-            
-        }
+        updateScores(p)
 
     }
    
+}
+
+function updateScores(p){ 
+    for (i = 0; i<6; i++){
+    var total = 0;
+    var p1Score = parseFloat(document.getElementById('t1Score').value);
+    var p1p2Score = parseFloat(document.getElementById(valueFields[i]+players[p]).value)
+    total += p1Score
+    total += p1p2Score
+    //console.log(valueFields[i]+player)
+    //this function worked for updating when player set to P1
+    document.getElementById(valueFields[i]+players[p]).value = (total);
+    
+}
 }
