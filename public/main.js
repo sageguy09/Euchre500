@@ -6,6 +6,12 @@ function setActionUrl(){
 };
 
 function submitRound(){
-    var p1p2Score = document.getElementById('t1Score');
-    alert(p1p2Score.value)
+    event.preventDefault();
+    var p1p2Score = parseFloat(document.getElementById('t1Score').value);
+    var p1Score = parseFloat(document.getElementById('cScoreP1').value);
+    var total = 0;
+    total += p1Score
+    total += p1p2Score
+  document.getElementById('cScoreP1').value = (total);
 };
+
