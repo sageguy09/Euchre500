@@ -8,10 +8,10 @@ function setActionUrl(){
 function submitRound(){
     event.preventDefault();
     var p1p2Score = parseFloat(document.getElementById('t1Score').value);
-    var p1Score = parseFloat(document.getElementById('cScoreP1').value);
+    var p1Score = parseFloat(document.getElementById('p1Val1').value);
     var total = 0;
     total += p1Score
     total += p1p2Score
-  document.getElementById('cScoreP1').value = (total);
+  document.getElementById('p1Val1').value = (total);
 };
 
