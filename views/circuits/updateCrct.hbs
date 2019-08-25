@@ -296,8 +296,8 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
-                <input name="team1" type="radio" />
-                <label for="team1" role="rowheader">(team1):P1+P2</label>
+                <input name="team1" type="checkbox" />
+                <label for="team1" >(team1):P1+P2</label>
                 </div>
                 <div class="td" role="gridcell">
                 <input type ="number"/>
@@ -452,6 +452,7 @@
                 </div>
             </div>
         </div>
+        <input type="submit" id="submitRound" value="SubmitValue">
       {{!-- End of roundScoring form --}}
       </form>   
     {{!-- End of roundScoring container --}}
@@ -473,7 +474,7 @@
         <button id="save">Save</button>
         <button id="delete">Delete</button>
         <button id="start">Add Player</button>
-        <button id="submitRound">Submit Round</button>
+        {{!-- <button id="submitRound">Submit Round</button> --}}
     </div>
 
 </container>
