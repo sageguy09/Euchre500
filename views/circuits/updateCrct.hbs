@@ -118,3 +118,358 @@
 </form>
 
 </div>
+
+<h1>Single Circuit View: {{circuit._id}}</h1>
+
+
+<container class="circuitsMain" "clearfix">
+    <container class="circuitBoard" id="circuitScore">
+        <div aria-label="circuit"
+            aria-describedby="caption" class="table" role="grid"
+        >
+            <h1 class="head">{{circuit.crctName}}</h1>
+            <div class="tr" role="row">
+        
+                <div class="th" role="columnheader">
+                Players
+                </div>
+                <div class="th" role="columnheader">
+                Score
+                </div>
+                <div class="th" role="columnheader">
+                Loaners
+                </div>
+                <div class="th" role="columnheader">
+                Euchres
+                </div>
+                <div class="th" role="columnheader">
+                Marches
+                </div>
+                <div class="th" role="columnheader">
+                Wins
+                </div>
+                <div class="th" role="columnheader">
+                Losses
+                </div>
+                <div class="th" role="columnheader">
+                Total
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader" id="nameP1">
+                {{circuit.nameP1}}
+                </div>
+                <div class="td" role="gridcell" id="scoreP1">
+                {{circuit.scoreP1}}
+                </div>
+                <div class="td" role="gridcell" id="loanerP1">
+                {{circuit.loanerP1}}
+                </div>
+                <div class="td" role="gridcell" id="euchreP1">
+                {{circuit.euchreP1}}
+                </div>
+                <div class="td" role="gridcell" id="marchP1">
+                {{circuit.marchP1}}
+                </div>
+                <div class="td" role="gridcell" id="winsP1">
+                {{circuit.winsP1}}
+                </div>
+                <div class="td" role="gridcell" id="lossP1">
+                {{circuit.lossP1}}
+                </div>
+                <div class="td" role="gridcell" id="totalP1">
+                {{circuit.totalP1}}
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader" id="nameP2">
+                {{circuit.nameP2}}
+                </div>
+                <div class="td" role="gridcell" id="scoreP2">
+                {{circuit.scoreP2}}
+                </div>
+                <div class="td" role="gridcell" id="loanerP2">
+                {{circuit.loanerP2}}
+                </div>
+                <div class="td" role="gridcell" id="euchreP2">
+                {{circuit.euchreP2}}
+                </div>
+                <div class="td" role="gridcell" id="marchP2">
+                {{circuit.marchP2}}
+                </div>
+                <div class="td" role="gridcell" id="winsP2">
+                {{circuit.winsP2}}
+                </div>
+                <div class="td" role="gridcell" id="lossP2">
+                {{circuit.lossP2}}
+                </div>
+                <div class="td" role="gridcell" id="totalP2">
+                {{circuit.totalP2}}
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader" id="nameP3">
+                {{circuit.nameP3}}
+                </div>
+                <div class="td" role="gridcell" id="scoreP3">
+                {{circuit.scoreP3}}
+                </div>
+                <div class="td" role="gridcell" id="loanerP3">
+                {{circuit.loanerP3}}
+                </div>
+                <div class="td" role="gridcell" id="euchreP3">
+                {{circuit.euchreP3}}
+                </div>
+                <div class="td" role="gridcell" id="marchP3">
+                {{circuit.marchP3}}
+                </div>
+                <div class="td" role="gridcell" id="winsP3">
+                {{circuit.winsP3}}
+                </div>
+                <div class="td" role="gridcell" id="lossP3">
+                {{circuit.lossP3}}
+                </div>
+                <div class="td" role="gridcell" id="totalP3">
+                {{circuit.totalP3}}
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader" id="nameP4">
+                {{circuit.nameP4}}
+                </div>
+                <div class="td" role="gridcell" id="scoreP4">
+                {{circuit.scoreP4}}
+                </div>
+                <div class="td" role="gridcell" id="loanerP4">
+                {{circuit.loanerP4}}
+                </div>
+                <div class="td" role="gridcell" id="euchreP4">
+                {{circuit.euchreP4}}
+                </div>
+                <div class="td" role="gridcell" id="marchP4">
+                {{circuit.marchP4}}
+                </div>
+                <div class="td" role="gridcell" id="winsP4">
+                {{circuit.winsP4}}
+                </div>
+                <div class="td" role="gridcell" id="lossP4">
+                {{circuit.lossP4}}
+                </div>
+                <div class="td" role="gridcell" id="totalP4">
+                {{circuit.totalP4}}
+                </div>
+            </div>
+        </div>
+    </container>
+    <container class="circuitBoard" id="roundScore">
+        <div aria-label="circuit"
+            aria-describedby="caption" class="table" role="grid"
+        >
+            <h1 class="head">Round Scoring</h1>
+            <div class="tr" role="row">
+        
+                <div class="th" role="columnheader">
+                Teams
+                </div>
+                <div class="th" role="columnheader">
+                Score
+                </div>
+                <div class="th" role="columnheader">
+                Loaners
+                </div>
+                <div class="th" role="columnheader">
+                Euchres
+                </div>
+                <div class="th" role="columnheader">
+                Marches
+                </div>
+                <div class="th" role="columnheader">
+                Wins
+                </div>
+                <div class="th" role="columnheader">
+                Losses
+                </div>
+                <div class="th" role="columnheader">
+                Total
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team1):P1+P2
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team2):P3+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team3):P1+P3
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team4):P2+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (team5):P1+P4
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+            <div class="tr" role="row">
+                <div class="th" role="rowheader">
+                (teams6):P2+P3
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+                <div class="td" role="gridcell">
+                
+                </div>
+            </div>
+        </div>
+    </container>
+    <wrapper class="sideList">
+        <div class="circuitList">
+            <h3 class="listheader">All Circuits</h3>
+                <ul>
+                    {{#each circuits}}
+                    <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/circuits/new">Click here to add a circuit</a>
+        </div>
+    </wrapper>
+    <div class="circuitButtons">
+        <button id="start">Start</button>
+        <button id="resume">Resume</button>
+        <button id="save">Save</button>
+        <button id="delete">Delete</button>
+        <button id="start">Add Player</button>
+        <button id="submitRound">Submit Round</button>
+    </div>
+</container>
+
+<a  href="/sitemain/circuits/{{circuit._id}}/edit">Edit Issue</a>
