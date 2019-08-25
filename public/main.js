@@ -8,6 +8,10 @@ function setActionUrl(){
 const valueFields = [
     'score', 'loaner', 'euchre', 'march', 'wins', 'loss'
 ]
+const players = [
+    'P1', 'P2', 'P3', 'P4'
+]
+/*
 function submitRound(){
     event.preventDefault();
     let player = 'P1'
@@ -29,17 +33,22 @@ pValue += i
 }
 */
 
-function testPrint (){
-    //event.preventDefault();
+function submitRound (){
+    event.preventDefault();
     let player = 'P1'
-    for (i = 0; i<6; i++){
-        var total = 0;
-        var p1Score = parseFloat(document.getElementById('t1Score').value);
-        var p1p2Score = parseFloat(document.getElementById(valueFields[i]+player).value)
-        total += p1Score
-        total += p1p2Score
-        //console.log(valueFields[i]+player)
-       
-        document.getElementById(valueFields[i]+player).value = (total);
+    for (p = 0; p<=2; p++){
+        for (i = 0; i<6; i++){
+            var total = 0;
+            var p1Score = parseFloat(document.getElementById('t1Score').value);
+            var p1p2Score = parseFloat(document.getElementById(valueFields[i]+players[p]).value)
+            total += p1Score
+            total += p1p2Score
+            //console.log(valueFields[i]+player)
+            //this function worked for updating when player set to P1
+            document.getElementById(valueFields[i]+players[p]).value = (total);
+            
+        }
+
     }
+   
 }
