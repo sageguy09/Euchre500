@@ -6,5 +6,6 @@ function setActionUrl(){
 };
 
 function submitRound(){
-    alert('test submit')
+    var p1p2Score = document.getElementById('t1Score');
+    alert(p1p2Score.value)
 };
