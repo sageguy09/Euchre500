@@ -262,7 +262,7 @@
         </div>
     </container>
     <container class="circuitBoard" id="roundScore">
-      <form id="team1Inputs">
+      <form id="teamInputs">
         <div aria-label="circuit"
             aria-describedby="caption" class="table" role="grid"
         >
@@ -452,7 +452,9 @@
                 </div>
             </div>
         </div>
+      {{!-- End of roundScoring form --}}
       </form>   
+    {{!-- End of roundScoring container --}}
     </container>
     <wrapper class="sideList">
         <div class="circuitList">
@@ -473,6 +475,7 @@
         <button id="start">Add Player</button>
         <button id="submitRound">Submit Round</button>
     </div>
+
 </container>
 
 <a  href="/sitemain/circuits/{{circuit._id}}/edit">Edit Issue</a>

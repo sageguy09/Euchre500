@@ -4,4 +4,3 @@ function setActionUrl(){
 
     form.action = action_src;
 }
-
