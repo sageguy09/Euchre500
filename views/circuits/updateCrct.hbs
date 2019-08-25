@@ -262,7 +262,7 @@
         </div>
     </container>
     <container class="circuitBoard" id="roundScore">
-      <form id="teamInputs">
+      <form name="teamInputs" id="teamInputsfrm" action="#">
         <div aria-label="circuit"
             aria-describedby="caption" class="table" role="grid"
         >
@@ -452,7 +452,7 @@
                 </div>
             </div>
         </div>
-        <input type="submit" id="submitRound" value="SubmitValue">
+        <input type="submit" id="subRound" value="Submit Round" onclick="submitRound();" >
       {{!-- End of roundScoring form --}}
       </form>   
     {{!-- End of roundScoring container --}}

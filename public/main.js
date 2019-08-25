@@ -3,4 +3,8 @@ function setActionUrl(){
     var form = document.getElementById('createCircuit')
 
     form.action = action_src;
-}
+};
+
+function submitRound(){
+    alert('test submit')
+};
