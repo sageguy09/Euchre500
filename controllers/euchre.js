@@ -106,6 +106,18 @@ euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
 })
 
+//put handler to update an existing player - redirect to single circuit view
+euchreRouter.put('/players/:playerId', (req, res) => {
+  playersApi.updatePlayer(req.params.playerId, req.body).then( player => {
+    res.redirect('/sitemain/players/' + req.params.playerId);
+  })
+})
+//get updatePlayerplayer 
+euchreRouter.get('/players/:playerId/edit', (req, res) => {
+  circuitsApi.getPlayer(req.params.playerId).then(player => {
+    res.render('./players/updatePlayer', {player});
+  })
+})
 
 
 
