@@ -14,8 +14,13 @@ const mongoose = require('./connection.js')
  * NOTE: skip this if you are not using mongoose
  *
  */
-//const SampleModelSchema = new mongoose.Schema({
-//  name: String
+const PlayerSchema = new mongoose.Schema({
+  playerAlias: String,
+  firstName : String,
+  location: String,
+  playerUid: String
+})
+
 //})
 
 /* Step 3
@@ -24,7 +29,7 @@ const mongoose = require('./connection.js')
  * NOTE: skip this if you are not using mongoose
  *
  */
-//const SampleCollection = mongoose.model('Sample', SampleModelSchema)
+const PlayerCollection = mongoose.model('Players', PlayerSchema)
 
 /* Step 4
  *
@@ -35,11 +40,41 @@ function getHelloWorldString() {
   return 'hello world'
 }
 
+function getAllPlayers() {
+  return PlayerCollection.find()
+}
+
+function getPlayer(playerId){
+  return PlayerCollection.findById(playerId)
+}
+function getPlayerByName(playerName) {
+  return PlayerCollection.findOne(circuitName.name)
+}
+
+function addNewPlayer(newPlayer){
+  return PlayerColletion.insertMany(newPlayer);
+}
+
+function deletePlayer(playerId) {
+  return PlayerCollection.findByIdAndDelete(playerId)
+}
+
+function updatePlayer(playerId, player) {
+  return PlayerCollection.findByIdAndUpdate(playerId, player)
+}
+
+
 /* Step 5
  *
  * TODO: export all functions from this file by adding their names as keys to this
  * object
  */
 module.exports = {
-  getHelloWorldString
+  addNewPlayer,
+  deletePlayer,
+  getAllPlayers,
+  getHelloWorldString,
+  getPlayer, 
+  getPlayerByName,
+  updatePlayer
 }
