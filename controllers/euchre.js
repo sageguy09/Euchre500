@@ -102,8 +102,7 @@ euchreRouter.get('/players/:playerId', (req, res) => {
   })
 })
 
-
-//delete function
+//delete player function
 euchreRouter.delete('/players/:playerId', (req, res) => {
   playersApi.deletePlayer(req.params.playerId).then(deletedPlayer => {
     res.redirect('/sitemain/players')
@@ -116,7 +115,7 @@ euchreRouter.put('/players/:playerId', (req, res) => {
     res.redirect('/sitemain/players/' + req.params.playerId);
   })
 })
-//get updatePlayerplayer 
+//get updatePlayer form
 euchreRouter.get('/players/:playerId/edit', (req, res) => {
   playersApi.getPlayer(req.params.playerId).then(player => {
     res.render('./players/updatePlayer', {player});
