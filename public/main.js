@@ -49,7 +49,7 @@ function updatePlayerScores(){
     //updateScores('P1', teams[0]);
     //updateScores('P2', teams[0]);
     
-for (t = 0; t <=1; t++){
+for (t = 0; t <= teams.length; t++){
     let team = teams[t]
     if (team == 'T1'){
         updateScores('P1', team),
@@ -60,6 +60,29 @@ for (t = 0; t <=1; t++){
         updateScores('P3', team ),
         updateScores('P4', team )
     }
+    if (team == 'T3'){
+        
+        updateScores('P1', team ),
+        updateScores('P3', team )
+    }
+    if (team == 'T4'){
+        
+        updateScores('P2', team ),
+        updateScores('P4', team )
+    }
+    if (team == 'T5'){
+        
+        updateScores('P1', team ),
+        updateScores('P4', team )
+    }
+    if (team == 'T6'){
+        
+        updateScores('P2', team ),
+        updateScores('P3', team )
+    }
+
+
+
 }
 setRoundScore();
 }
@@ -106,6 +129,8 @@ function setRoundScore (){
         document.getElementById(valueFields[i]+teams[1]).value = (initVal);
         document.getElementById(valueFields[i]+teams[2]).value = (initVal);
         document.getElementById(valueFields[i]+teams[3]).value = (initVal);
+        document.getElementById(valueFields[i]+teams[4]).value = (initVal);
+        document.getElementById(valueFields[i]+teams[5]).value = (initVal);
         //console.log(valueFields[i]+teams[i])
     };
 }
