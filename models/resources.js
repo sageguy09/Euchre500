@@ -14,6 +14,7 @@ const mongoose = require('./connection.js')
 const ResourcesSchema = new mongoose.Schema({
   resourceName: String,
   resourceDescription: String,
+  resourceLink: String,
   resourceAddedBy: String
 })
 
@@ -37,14 +38,14 @@ function getAllResources() {
   return ResourcesCollection.find()
 }
 
-function getResources(resId){
+function getResource(resId){
   return ResourcesCollection.findById(resId)
 }
 function getResourceByName(resId) {
   return ResourcesCollection.findOne(resId.name)
 }
 
-function addNewResources(newResource){
+function addNewResource(newResource){
   return ResourcesCollection.insertMany(newResource);
 }
 
@@ -63,9 +64,9 @@ function updateResource (resId, resource) {
  */
 module.exports = {
   getAllResources,
-  getResources,
+  getResource,
   getResourceByName,
-  addNewResources,
+  addNewResource,
   deleteResource,
   updateResource
 }

@@ -128,13 +128,13 @@ euchreRouter.get('/players/:playerId/edit', (req, res) => {
 //get all resources
 euchreRouter.get('/resources', (req, res) => {
   resourcesApi.getAllResources().then(resources => {
-    res.render('./resources/resources' , {resources})
+    res.render('./resources/allRsrcs' , {resources})
   })
 })
 
 //render add newResource view
 euchreRouter.get('/resources/new', (req, res) => {
-  res.render('./resources/newResource')
+  res.render('./resources/newRsrc')
 })
 //post handler for newResource - redirect to single resource view
 euchreRouter.post('/resources', (req, res) =>{
@@ -145,7 +145,7 @@ euchreRouter.post('/resources', (req, res) =>{
 
 //get single resource
 euchreRouter.get('/resources/:resId', (req, res) => {
-  resourcesApi.getResources(req.params.resId).then(resource => {
+  resourcesApi.getResource(req.params.resId).then(resource => {
     res.render('./resources/resource', {resource});
   })
 })
@@ -153,7 +153,7 @@ euchreRouter.get('/resources/:resId', (req, res) => {
 //delete resource function
 euchreRouter.delete('/resources/:resId', (req, res) => {
   resourcesApi.deleteResource(req.params.resId).then(deletedResource => {
-    res.redirect('/sitemain/resources')
+    res.redirect('/sitemain/allRsrcs')
   })
 })
 
@@ -165,7 +165,7 @@ euchreRouter.put('/resources/:resId', (req, res) => {
 })
 //get updatePlayer form
 euchreRouter.get('/resources/:resId/edit', (req, res) => {
-  resourcesApi.getResources(req.params.resId).then(resource => {
+  resourcesApi.getResource(req.params.resId).then(resource => {
     res.render('./resources/updateResource', {resource});
   })
 })

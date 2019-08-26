@@ -1,0 +1,24 @@
+<h1>New Resource</h1>
+
+<div class='resourceDiv'>
+<form class="newCircuit" method="POST" action='/sitemain/resources/'>
+
+ {{!-- player name/id --}}
+  <label for="resourceName">Resource Name</label>
+  <input type="text" placeholder="Enter a title" name="resourceName" />
+{{!-- player names --}}
+  <label for="resourceDescription">Description</label>
+  <input type="text"  placeholder="Enter a brief description of this resource" name="resourceDescription" />
+
+  <label for="resourceLink">Link to resource site</label>
+  <input type="text" placeholder="http://yourlink.here" name="resourceLink" />
+
+   <label for="resourceAddedBy">Added by</label>
+  <input type="text" placeholder="Enter add user's username" name="resourceAddedBy" />
+
+   {{!-- <label for="playerUid">PlayerUid</label> --}}
+  {{!-- <input type="text" placeholder="autogenerate" name="playerUid" /> --}}
+    <input type="submit" value="Add Resource" />
+    <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
+</form>
+</div>
