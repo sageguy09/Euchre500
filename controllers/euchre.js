@@ -27,6 +27,7 @@ euchreRouter.get('/', (req, res) => {
   res.send(playersApi.getHelloWorldString())
 })
 
+/* ****** CIRCUITS ****** */
 
 //render newCrct view
 euchreRouter.get("/circuits/new", (req, res) => {
@@ -75,7 +76,7 @@ euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
   })
 })
 
-
+/* ****** PLAYERS ****** */
 
 //get all players
 euchreRouter.get('/players', (req, res) => {
@@ -101,9 +102,12 @@ euchreRouter.get('/players/:playerId', (req, res) => {
   })
 })
 
-//get main/resources test
-euchreRouter.get('/resources', (req, res) => {
-  res.send(resourcesApi.getHelloWorldString())
+
+//delete function
+euchreRouter.delete('/circuits/:circuitId', (req, res) => {
+  circuitsApi.deleteCircuit(req.params.circuitId).then(deletedCircuit => {
+    res.redirect('/sitemain/circuits')
+  })
 })
 
 //put handler to update an existing player - redirect to single circuit view
@@ -119,6 +123,13 @@ euchreRouter.get('/players/:playerId/edit', (req, res) => {
   })
 })
 
+
+/* ****** RESOURCEs ****** */
+
+//get main/resources test
+euchreRouter.get('/resources', (req, res) => {
+  res.send(resourcesApi.getHelloWorldString())
+})
 
 
 /* Step 6
