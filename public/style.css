@@ -76,3 +76,7 @@
 .newCircuit, input[type=submit]:hover {
   background-color: #45a049;
 }
+
+.newCircuit, p {
+  background-color: #45a049
+}

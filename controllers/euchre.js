@@ -94,6 +94,13 @@ euchreRouter.post('/players', (req, res) =>{
   })
 })
 
+//get single player
+euchreRouter.get('/players/:playerId', (req, res) => {
+  playersApi.getPlayer(req.params.playerId).then(player => {
+    res.render('./players/player', {player});
+  })
+})
+
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
