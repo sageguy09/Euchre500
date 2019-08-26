@@ -103,7 +103,6 @@ function updateCircuit(circuitId, circuit) {
  */
 module.exports = {
   addNewCircuit,
-  createCircuit,
   deleteCircuit,
   getCircuitByName,
   getHelloWorldString,
