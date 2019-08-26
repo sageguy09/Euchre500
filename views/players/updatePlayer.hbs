@@ -1,0 +1,25 @@
+<h1>Edit Player</h1>
+
+<div class='playerDiv'>
+<form class="newCircuit" method="POST" action='/sitemain/players/{{player._id}}?_method=PUT'>
+
+ {{!-- player name/id --}}
+  <label for="playerAlias">Player Username</label>
+  <input type="text" value="{{player.playerAlias}}" name="playerAlias" />
+{{!-- player names --}}
+  <label for="firstName">First name</label>
+  <input type="text" value="{{player.firstName}}" name="firstName" />
+
+  <label for="location">Location</label>
+  <input type="text" value="{{player.location}}" name="location" />
+
+   <label for="PlayerCreatedBy">User added by</label>
+  <input type="text" value="{{player.PlayerCreatedBy}}" name="PlayerCreatedBy" />
+
+   <label for="playerUid">PlayerUid</label>
+  <input type="text" value="{{player.playerUid}}" name="playerUid" />
+    <input type="submit" value="Save Changes" />
+        <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/players">
+        <input type="submit" value="Delete"  formaction="/sitemain/players/{{player._id}}?_method=DELETE">
+</form>
+</div>

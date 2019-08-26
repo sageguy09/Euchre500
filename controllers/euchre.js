@@ -104,9 +104,9 @@ euchreRouter.get('/players/:playerId', (req, res) => {
 
 
 //delete function
-euchreRouter.delete('/circuits/:circuitId', (req, res) => {
-  circuitsApi.deleteCircuit(req.params.circuitId).then(deletedCircuit => {
-    res.redirect('/sitemain/circuits')
+euchreRouter.delete('/players/:playerId', (req, res) => {
+  playersApi.deletePlayer(req.params.playerId).then(deletedPlayer => {
+    res.redirect('/sitemain/players')
   })
 })
 
@@ -118,7 +118,7 @@ euchreRouter.put('/players/:playerId', (req, res) => {
 })
 //get updatePlayerplayer 
 euchreRouter.get('/players/:playerId/edit', (req, res) => {
-  circuitsApi.getPlayer(req.params.playerId).then(player => {
+  playersApi.getPlayer(req.params.playerId).then(player => {
     res.render('./players/updatePlayer', {player});
   })
 })
