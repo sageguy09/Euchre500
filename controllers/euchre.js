@@ -166,7 +166,7 @@ euchreRouter.put('/resources/:resId', (req, res) => {
 //get updatePlayer form
 euchreRouter.get('/resources/:resId/edit', (req, res) => {
   resourcesApi.getResource(req.params.resId).then(resource => {
-    res.render('./resources/updateResource', {resource});
+    res.render('./resources/updateRsrc', {resource});
   })
 })
 /* Step 6

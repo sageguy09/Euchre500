@@ -1,0 +1,14 @@
+<h1>All Players</h1>
+
+
+<wrapper class="resourceList">
+        <div class="resourceList">
+            <h3 class="listheader">All Euchre Learning Resources</h3>
+                <ul>
+                    {{#each resources}}
+                    <li><a href="/sitemain/resources/{{_id}}"> {{resourceName}}</a></li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/resources/new">Click here to add a euchre learning resource</a>
+        </div>
+    </wrapper>
