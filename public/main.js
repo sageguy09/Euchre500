@@ -11,6 +11,9 @@ const valueFields = [
 const players = [
     'P1', 'P2', 'P3', 'P4'
 ]
+const teams = [
+    'T1', 'T2', 'T3', 'T4', 'T5', 'T6'
+]
 /*
 function submitRound(){
     event.preventDefault();
@@ -36,13 +39,76 @@ pValue += i
 function submitRound (){
     event.preventDefault();
     //let player = 'P1'
+    updatePlayerScores();
+   
+}
+
+
+function updatePlayerScores(){
+    return updateScores('P1', teams[0]);}
+    /*
+for (t = 0; t <1; t++){
+    if (t == 1){
+        updateScores('P1', teams[t]);
+        updateScores('P2', teams[t]);
+        return console.log(teams[t])
+    }
+    if (t == 2){
+        updateScores('P3', teams[t] );
+        updateScores('P4', teams[t] );
+        return console.log(teams[t])
+    }*/
+    
+    /*if (team == 3){
+        updateScores('P1');
+        updateScores('P3');
+    }
+    if (team == 4){
+        updateScores('P2');
+        updateScores('P4');
+    }
+    if (team == 5){
+        updateScores('P1');
+        updateScores('P4');
+    }
+    if (team == 6){
+        updateScores('P2');
+        updateScores('P3');
+    }
+}
+}
+*/
+function updateScores(p, team){ 
+    for (i = 0; i<6; i++){
+    var total = 0;
+    var p1Score = parseFloat(document.getElementById(valueFields[i]+team).value);
+    var p1p2Score = parseFloat(document.getElementById(valueFields[i]+p).value)
+    total += p1Score
+    total += p1p2Score
+    //console.log(valueFields[i]+p)
+    //this function worked for updating when player set to P1
+    document.getElementById(valueFields[i]+p).value = (total);
+    
+}
+}
+
+
+
+/*
+function submitRound (){
+    event.preventDefault();
+    //let player = 'P1'
+    updatePlayerScores();
+   
+}
+
+
+function updatePlayerScores(){
     for (p = 0; p<=2; p++){
         updateScores(p)
 
     }
-   
 }
-
 function updateScores(p){ 
     for (i = 0; i<6; i++){
     var total = 0;
@@ -56,3 +122,10 @@ function updateScores(p){
     
 }
 }
+
+
+
+*/
+
+
+
