@@ -9,10 +9,7 @@
 const mongoose = require('./connection.js')
 
 /* Step 2
- *
- * TODO: create model schema 
- * NOTE: skip this if you are not using mongoose
- *
+ * create model schema 
  */
 const PlayerSchema = new mongoose.Schema({
   playerAlias: String,
@@ -24,10 +21,7 @@ const PlayerSchema = new mongoose.Schema({
 //})
 
 /* Step 3
- *
- * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
- *
+ * create collection API
  */
 const PlayerCollection = mongoose.model('Players', PlayerSchema)
 
@@ -65,8 +59,7 @@ function updatePlayer(playerId, player) {
 
 
 /* Step 5
- *
- * TODO: export all functions from this file by adding their names as keys to this
+ * export all functions from this file by adding their names as keys to this
  * object
  */
 module.exports = {

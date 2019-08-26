@@ -62,45 +62,7 @@ const CircuitCollection = mongoose.model('circuit', CircuitSchema)
 function getHelloWorldString() {
   return 'hello world'
 }
-//create is a testing function only
-function createCircuit() {
-  return CircuitCollection.create({
-    crctName: "test circuit",
-  crctCreatedBy: "Ryan",
-  nameP1: "Max",
-  nameP2: "Tyler",
-  nameP3: "Dana",
-  nameP4: "Wes",
-  scoreP1: 0,
-  scoreP2: 0,
-  scoreP3: 0,
-  scoreP4: 0,
-  euchreP1: 0,
-  euchreP2: 0,
-  euchreP3: 0,
-  euchreP4: 0,
-  loanerP1: 0,
-  loanerP2: 0,
-  loanerP3: 0,
-  loanerP4: 0,
-  marchP1: 0,
-  marchP2: 0,
-  marchP3: 0,
-  marchP4: 0,
-  winsP1: 0,
-  winsP2: 0,
-  winsP3: 0,
-  winsP4: 0,
-  lossP1: 0,
-  lossP2: 0,
-  lossP3: 0,
-  lossP4: 0,
-  totalP1: 0,
-  totalP2: 0,
-  totalP3: 0,
-  totalP4: 0
-  })
-}
+
 function getAllCircuits() {
   return CircuitCollection.find()
 }
