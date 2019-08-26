@@ -1,0 +1,26 @@
+<h1>New Player</h1>
+
+<div class='playerDiv'>
+<form class="newCircuit" method="POST" action='/sitemain/players/'></form>
+
+ {{!-- player name/id --}}
+  <label for="playerAlias">Player Username</label>
+  <input type="text" placeholder="Enter a display name" name="playerAlias" />
+{{!-- player names --}}
+  <label for="firstName">First name</label>
+  <input type="text" placeholder="Enter name" name="firstName" />
+
+  <label for="location">Location</label>
+  <input type="text" placeholder="Enter current city" name="location" />
+
+   <label for="PlayerCreatedBy">User added by</label>
+  <input type="text" placeholder="Enter add user's username" name="PlayerCreatedBy" />
+
+   <label for="playerUid">PlayerUid</label>
+  <input type="text" placeholder="autogenerate" name="nameP3" />
+
+{{!-- score fields --}}
+   {{!-- <label for="scoreP1">Player 1 Score</label> --}}
+  <input type="hidden" value=0 name="scoreP1" />
+
+</div>

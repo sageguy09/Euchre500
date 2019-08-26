@@ -74,17 +74,22 @@ euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
     res.render('./circuits/updateCrct', {circuit});
   })
 })
-/*
-comment out until ready to implement
+
+
 //get main/users test
 euchreRouter.get('/players', (req, res) => {
   res.send(playersApi.getHelloWorldString())
 })
+
+euchreRouter.get('/players/new', (req, res) => {
+  res.render('.players/newPlayer')
+})
+
 //get main/resources test
 euchreRouter.get('/resources', (req, res) => {
   res.send(resourcesApi.getHelloWorldString())
 })
-*/
+
 
 
 

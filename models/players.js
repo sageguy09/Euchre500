@@ -15,6 +15,7 @@ const PlayerSchema = new mongoose.Schema({
   playerAlias: String,
   firstName : String,
   location: String,
+  PlayerCreatedBy: String,
   playerUid: String
 })
 
