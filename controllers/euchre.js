@@ -125,12 +125,50 @@ euchreRouter.get('/players/:playerId/edit', (req, res) => {
 
 /* ****** RESOURCEs ****** */
 
-//get main/resources test
+//get all resources
 euchreRouter.get('/resources', (req, res) => {
-  res.send(resourcesApi.getHelloWorldString())
+  resourcesApi.getAllResources().then(resources => {
+    res.render('./resources/resources' , {resources})
+  })
 })
 
+//render add newResource view
+euchreRouter.get('/resources/new', (req, res) => {
+  res.render('./resources/newResource')
+})
+//post handler for newResource - redirect to single resource view
+euchreRouter.post('/resources', (req, res) =>{
+  resourcesApi.addNewResource(req.body).then( newResource => {
+     res.redirect('/sitemain/resources/')
+  })
+})
 
+//get single resource
+euchreRouter.get('/resources/:resId', (req, res) => {
+  resourcesApi.getResources(req.params.resId).then(resource => {
+    res.render('./resources/resource', {resource});
+  })
+})
+
+//delete resource function
+euchreRouter.delete('/resources/:resId', (req, res) => {
+  resourcesApi.deleteResource(req.params.resId).then(deletedResource => {
+    res.redirect('/sitemain/resources')
+  })
+})
+
+//put handler to update an existing resource - redirect to single resource view
+euchreRouter.put('/resources/:resId', (req, res) => {
+  resourcesApi.updateResource(req.params.resId, req.body).then( resource => {
+    res.redirect('/sitemain/resources/' + req.params.resId);
+  })
+})
+//get updatePlayer form
+euchreRouter.get('/resources/:resId/edit', (req, res) => {
+  resourcesApi.getResources(req.params.resId).then(resource => {
+    res.render('./resources/updateResource', {resource});
+  })
+})
 /* Step 6
  * Export the router from the file.
  */

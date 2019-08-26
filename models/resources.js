@@ -9,22 +9,20 @@
 const mongoose = require('./connection.js')
 
 /* Step 2
- *
  * TODO: create model schema 
- * NOTE: skip this if you are not using mongoose
- *
  */
-//const SampleModelSchema = new mongoose.Schema({
-//  name: String
-//})
+const ResourcesSchema = new mongoose.Schema({
+  resourceName: String,
+  resourceDescription: String,
+  resourceAddedBy: String
+})
+
 
 /* Step 3
  *
- * TODO: create collection API
- * NOTE: skip this if you are not using mongoose
- *
+ * create collection API
  */
-//const SampleCollection = mongoose.model('Sample', SampleModelSchema)
+const ResourcesCollection = mongoose.model('Resource', ResourcesSchema)
 
 /* Step 4
  *
@@ -35,11 +33,39 @@ function getHelloWorldString() {
   return 'hello world'
 }
 
+function getAllResources() {
+  return ResourcesCollection.find()
+}
+
+function getResources(resId){
+  return ResourcesCollection.findById(resId)
+}
+function getResourceByName(resId) {
+  return ResourcesCollection.findOne(resId.name)
+}
+
+function addNewResources(newResource){
+  return ResourcesCollection.insertMany(newResource);
+}
+
+function deleteResource(resId) {
+  return ResourcesCollection.findByIdAndDelete(resId)
+}
+
+function updateResource (resId, resource) {
+  return ResourcesCollection.findByIdAndUpdate(resId, resource)
+}
+
 /* Step 5
  *
  * TODO: export all functions from this file by adding their names as keys to this
  * object
  */
 module.exports = {
-  getHelloWorldString
+  getAllResources,
+  getResources,
+  getResourceByName,
+  addNewResources,
+  deleteResource,
+  updateResource
 }
