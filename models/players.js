@@ -47,7 +47,7 @@ function getPlayerByName(playerName) {
 }
 
 function addNewPlayer(newPlayer){
-  return PlayerColletion.insertMany(newPlayer);
+  return PlayerCollection.insertMany(newPlayer);
 }
 
 function deletePlayer(playerId) {

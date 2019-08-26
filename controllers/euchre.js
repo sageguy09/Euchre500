@@ -76,13 +76,22 @@ euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
 })
 
 
-//get main/users test
-euchreRouter.get('/players', (req, res) => {
-  res.send(playersApi.getHelloWorldString())
-})
 
+//get all players
+euchreRouter.get('/players', (req, res) => {
+  playersApi.getAllPlayers().then(players =>{
+    res.render('./players/allPlayers', {players})
+  })
+})
+//render add newPlayer view
 euchreRouter.get('/players/new', (req, res) => {
-  res.render('.players/newPlayer')
+  res.render('./players/newPlayer')
+})
+//post handler for newCrct - redirect to single circuit view
+euchreRouter.post('/players', (req, res) =>{
+  playersApi.addNewPlayer(req.body).then( newPlayer => {
+     res.redirect('/sitemain/players/')
+  })
 })
 
 //get main/resources test

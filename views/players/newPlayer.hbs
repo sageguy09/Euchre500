@@ -1,7 +1,7 @@
 <h1>New Player</h1>
 
 <div class='playerDiv'>
-<form class="newCircuit" method="POST" action='/sitemain/players/'></form>
+<form class="newCircuit" method="POST" action='/sitemain/players/'>
 
  {{!-- player name/id --}}
   <label for="playerAlias">Player Username</label>
@@ -18,9 +18,6 @@
 
    <label for="playerUid">PlayerUid</label>
   <input type="text" placeholder="autogenerate" name="nameP3" />
-
-{{!-- score fields --}}
-   {{!-- <label for="scoreP1">Player 1 Score</label> --}}
-  <input type="hidden" value=0 name="scoreP1" />
-
+    <input type="submit" value="Create Circuit" />
+</form>
 </div>

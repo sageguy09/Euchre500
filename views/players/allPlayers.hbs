@@ -1,0 +1,35 @@
+<h1>All Players</h1>
+
+<div class='playerDiv'>
+<form class="newCircuit" method="POST" action='/sitemain/players/'>
+
+ {{!-- player name/id --}}
+  <label for="playerAlias">Player Username</label>
+  <input type="text" placeholder="Enter a display name" name="playerAlias" />
+{{!-- player names --}}
+  <label for="firstName">First name</label>
+  <input type="text" placeholder="Enter name" name="firstName" />
+
+  <label for="location">Location</label>
+  <input type="text" placeholder="Enter current city" name="location" />
+
+   <label for="PlayerCreatedBy">User added by</label>
+  <input type="text" placeholder="Enter add user's username" name="PlayerCreatedBy" />
+
+   <label for="playerUid">PlayerUid</label>
+  <input type="text" placeholder="autogenerate" name="nameP3" />
+    <input type="submit" value="Create Circuit" />
+</form>
+</div>
+
+<wrapper class="playerList">
+        <div class="playerList">
+            <h3 class="listheader">All Players</h3>
+                <ul>
+                    {{#each players}}
+                    <li><a href="/sitemain/players/{{_id}}"> {{playerAlias}}</a></li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/players/new">Click here to add a player</a>
+        </div>
+    </wrapper>
