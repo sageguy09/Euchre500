@@ -2,6 +2,26 @@
     overflow: auto;
 }
 
+.navigation {
+  list-style: none;
+  margin:0;
+  background: lightslategray;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+}
+.navigation a:hover {
+  background: darken(lightslategray, 5%);
+}
+
 .table {
     border: 1px solid;
     
