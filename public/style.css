@@ -126,5 +126,6 @@ header h1 {
 
 .disableElement {
   pointer-events: none;
-  opacity: 0.4;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
 }
