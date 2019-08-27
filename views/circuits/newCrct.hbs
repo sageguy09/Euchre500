@@ -20,16 +20,37 @@
     {{/each}}
   </datalist>
   <label for="nameP1">Player Name 1</label>
-  <input type="text" placeholder="Enter Player Name" name="nameP1" />
-
+  {{!-- <input type="text" placeholder="Enter Player Name" name="nameP1" /> --}}
+<input list="players" name="nameP1">
+  <datalist id="players">
+    {{#each players}}
+      <option value="{{playerAlias}}">
+    {{/each}}
+  </datalist>
    <label for="nameP2">Player Name 2</label>
-  <input type="text" placeholder="Enter Player Name" name="nameP2" />
-
+  {{!-- <input type="text" placeholder="Enter Player Name" name="nameP2" /> --}}
+<input list="players" name="nameP2">
+  <datalist id="players">
+    {{#each players}}
+      <option value="{{playerAlias}}">
+    {{/each}}
+  </datalist>
    <label for="nameP3">Player Name 3</label>
-  <input type="text" placeholder="Enter Player Name" name="nameP3" />
-
+  {{!-- <input type="text" placeholder="Enter Player Name" name="nameP3" /> --}}
+<input list="players" name="nameP3">
+  <datalist id="players">
+    {{#each players}}
+      <option value="{{playerAlias}}">
+    {{/each}}
+  </datalist>
    <label for="nameP4">Player Name 4</label>
-  <input type="text" placeholder="Enter Player Name" name="nameP4" />
+  {{!-- <input type="text" placeholder="Enter Player Name" name="nameP4" /> --}}
+  <input list="players" name="nameP4">
+  <datalist id="players">
+    {{#each players}}
+      <option value="{{playerAlias}}">
+    {{/each}}
+  </datalist>
 {{!-- score fields --}}
    {{!-- <label for="scoreP1">Player 1 Score</label> --}}
   <input type="hidden" value=0 name="scoreP1" />
