@@ -22,3 +22,15 @@
     <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
 </form>
 </div>
+
+<wrapper class="playerListDb">
+        <div class="playerListDb">
+            <h3 class="listheader">All Players in Db</h3>
+                <ul>
+                    {{#each players}}
+                    <li>{{playerAlias}}</li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/resources/new">Click here to add a euchre learning resource</a>
+        </div>
+    </wrapper>

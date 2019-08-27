@@ -10,6 +10,7 @@ const mongoose = require('./connection.js')
 
 /* Step 2
  * TODO: create model schema 
+ * playerId: ObjectId,
  */
 const ResourcesSchema = new mongoose.Schema({
   resourceName: String,
@@ -56,6 +57,7 @@ function deleteResource(resId) {
 function updateResource (resId, resource) {
   return ResourcesCollection.findByIdAndUpdate(resId, resource)
 }
+
 
 /* Step 5
  *

@@ -125,17 +125,26 @@ euchreRouter.get('/players/:playerId/edit', (req, res) => {
 
 /* ****** RESOURCEs ****** */
 
+
 //get all resources
 euchreRouter.get('/resources', (req, res) => {
   resourcesApi.getAllResources().then(resources => {
     res.render('./resources/allRsrcs' , {resources})
   })
 })
+euchreRouter.get('/resources/new', (req,res) => {
+  playersApi.getAllPlayers().then(players => {
+      res.render('./resources/newRsrc', {players})
+      
+    })
+})
 
 //render add newResource view
-euchreRouter.get('/resources/new', (req, res) => {
-  res.render('./resources/newRsrc')
-})
+// euchreRouter.get('/resources/new', (req, res) => {
+  // res.render('./resources/newRsrc')
+// })
+
+
 //post handler for newResource - redirect to single resource view
 euchreRouter.post('/resources', (req, res) =>{
   resourcesApi.addNewResource(req.body).then( newResource => {
@@ -169,6 +178,7 @@ euchreRouter.get('/resources/:resId/edit', (req, res) => {
     res.render('./resources/updateRsrc', {resource});
   })
 })
+
 /* Step 6
  * Export the router from the file.
  */
