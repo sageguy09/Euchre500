@@ -183,6 +183,7 @@ euchreRouter.put('/resources/:resId', (req, res) => {
 
 euchreRouter.get('/resources/:resId/edit', (req, res) => {
    resourcesApi.getResource(req.params.resId).then(resource => {
+    // playersApi.getAllPlayers().then(players => {
       res.render('./resources/updateRsrc', {resource});
   })
 })

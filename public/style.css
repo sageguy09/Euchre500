@@ -85,8 +85,8 @@ header h1 {
     flex-direction: column;
     
 }
-
-.newCircuit,  input[type=text], select {
+/* formAddEdit */
+.formAddEdit,  input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -95,7 +95,7 @@ header h1 {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.newCircuit,  input[list=players], select {
+.formAddEdit,  input[list=players], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -105,7 +105,7 @@ header h1 {
   box-sizing: border-box;
 }
 
-.newCircuit, input[type=submit] {
+.formAddEdit, input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -116,10 +116,10 @@ header h1 {
   cursor: pointer;
 }
 
-.newCircuit, input[type=submit]:hover {
+.formAddEdit, input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.newCircuit, p {
+.formAddEdit, p {
   background-color: #45a049
 }

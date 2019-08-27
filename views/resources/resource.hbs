@@ -1,7 +1,7 @@
 <h1>View Resource Details</h1>
 
 <div class='resourceDiv'>
-<form class="newCircuit" method="GET" action='/sitemain/resources/{{resource._id}}/edit'>
+<form class="formAddEdit" method="GET" action='/sitemain/resources/{{resource._id}}/edit'>
 
  {{!-- player name/id --}}
   <label for="resourceName">Resource Title</label>
@@ -15,6 +15,6 @@
 
    <label for="resourceAddedBy">Added By</label>
   <input type="text" value="{{resource.resourceAddedBy}}" name="resourceAddedBy" />
-    <input type="submit" value="Edit Player" />
+    <input type="submit" value="Edit Resource" />
 </form>
 </div>
