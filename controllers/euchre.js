@@ -24,7 +24,7 @@ const euchreRouter = express.Router()
 
 //get main test
 euchreRouter.get('/', (req, res) => {
-  res.send(playersApi.getHelloWorldString())
+  res.render('./main')
 })
 
 /* ****** CIRCUITS ****** */
