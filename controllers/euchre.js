@@ -74,9 +74,26 @@ euchreRouter.put('/circuits/:circuitId', (req, res) => {
 //get edit circuit 
 euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
   circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
-    res.render('./circuits/updateCrctDetails', {circuit});
+    res.render('./circuits/updateCrct', {circuit});
   })
 })
+//get edit/resume circuit scoring
+euchreRouter.get('/circuits/:circuitId/editDetails', (req, res) => {
+  circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
+    playersApi.getAllPlayers().then(players => {
+    res.render('./circuits/updateCrctDetails', {circuit, players});
+  })
+})
+})
+//get edit/resume circuit scoring
+euchreRouter.get('/circuits/:circuitId/resumeScoring', (req, res) => {
+  circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
+    playersApi.getAllPlayers().then(players => {
+    res.render('./circuits/updateCrctupdateCrctScores', {circuit, players});
+  })
+})
+})
+
 
 /* ****** PLAYERS ****** */
 
