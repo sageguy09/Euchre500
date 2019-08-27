@@ -80,38 +80,17 @@ for (t = 0; t <= teams.length; t++){
         updateScores('P2', team ),
         updateScores('P3', team )
     }
-
-
-
 }
 setRoundScore();
 }
-    /*if (team == 3){
-        updateScores('P1');
-        updateScores('P3');
-    }
-    if (team == 4){
-        updateScores('P2');
-        updateScores('P4');
-    }
-    if (team == 5){
-        updateScores('P1');
-        updateScores('P4');
-    }
-    if (team == 6){
-        updateScores('P2');
-        updateScores('P3');
-    }
-}
-}
-*/
+   
 function updateScores(p, team){ 
     for (i = 0; i<6; i++){
         var total = 0;
-        var p1Score = parseFloat(document.getElementById(valueFields[i]+team).value);
-        var p1p2Score = parseFloat(document.getElementById(valueFields[i]+p).value)
-        total += p1Score
-        total += p1p2Score
+        var pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
+        var pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
+        total += pRScore
+        total += pCScore
         //console.log(valueFields[i]+p)
         //this function worked for updating when player set to P1
         document.getElementById(valueFields[i]+p).value = (total);
@@ -119,6 +98,9 @@ function updateScores(p, team){
     }
 }
 
+function sumTotalRoundScore(){
+
+}
 
 function setRoundScore (){
     event.preventDefault;
