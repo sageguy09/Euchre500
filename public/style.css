@@ -123,3 +123,8 @@ header h1 {
 .formAddEdit, p {
   background-color: #45a049
 }
+
+.disableElement {
+  pointer-events: none;
+  opacity: 0.4;
+}
