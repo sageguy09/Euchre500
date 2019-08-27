@@ -74,7 +74,7 @@ euchreRouter.put('/circuits/:circuitId', (req, res) => {
 //get edit circuit 
 euchreRouter.get('/circuits/:circuitId/edit', (req, res) => {
   circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
-    res.render('./circuits/updateCrct', {circuit});
+    res.render('./circuits/updateCrctScores', {circuit});
   })
 })
 
