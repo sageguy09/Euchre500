@@ -90,7 +90,9 @@
                 {{circuit.totalP4}}
                 </div>
             </div>
-            <input type="submit" value="Update Circuit" />
+            <div>
+            <input type="submit" form="updateDetails"  value="Update Circuit" />
+            </div>
           </form>
         </div>
     </container>
@@ -218,6 +220,7 @@
             </div>
         </div>
         <input type="submit" id="subRound" value="Submit Round" onclick="submitRound();" >
+        <input type="submit" value="Reset Scores" onclick="confirmResetRound();" >
       {{!-- End of roundScoring form --}}
       </form>   
     {{!-- End of roundScoring container --}}

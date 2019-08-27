@@ -121,7 +121,7 @@ function updateScores(p, team){
 
 
 function setRoundScore (){
-    
+    event.preventDefault;
     const initVal = 0;
     for (i=0; i<6; i++){
         
@@ -135,7 +135,16 @@ function setRoundScore (){
     };
 }
 
-
+function confirmResetRound(){
+    let resetScores = setRoundScore();
+    let c = confirm("Are you sure you want to reset the round score form?");
+    if (c == true) {
+        return resetScores;
+    }
+    else {
+        return;
+    }
+}
 
 /*
 function submitRound (){
