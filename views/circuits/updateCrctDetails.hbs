@@ -36,7 +36,12 @@
             </div>
             <div class="tr" role="row" >
                 <div class="th" role="rowheader" id="nameP1">
-                {{circuit.nameP1}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP1" value="{{circuit.scoreP1}}" name="scoreP1">
                  <input class="td" role="gridcell" type="number" id="loanerP1" value="{{circuit.loanerP1}}" name="loanerP1">
@@ -50,7 +55,12 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP2">
-                {{circuit.nameP2}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP2" value="{{circuit.scoreP2}}" name="scoreP2">
                  <input class="td" role="gridcell" type="number" id="loanerP2" value="{{circuit.loanerP2}}" name="loanerP2">
@@ -64,7 +74,12 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP3">
-                {{circuit.nameP3}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP3" value="{{circuit.scoreP3}}" name="scoreP3">
                  <input class="td" role="gridcell" type="number" id="loanerP3" value="{{circuit.loanerP3}}" name="loanerP3">
@@ -78,7 +93,12 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP4">
-                {{circuit.nameP4}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP4" value="{{circuit.scoreP4}}" name="scoreP4">
                  <input class="td" role="gridcell" type="number" id="loanerP4" value="{{circuit.loanerP4}}"name="loanerP4">
@@ -91,6 +111,8 @@
                 </div>
             </div>
             <input type="submit" value="Update Circuit" />
+            <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
+    <input type="submit" value="Delete"  formaction="/sitemain/resources/{{resource._id}}?_method=DELETE">
           </form>
         </div>
     </container>
