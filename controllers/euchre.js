@@ -31,7 +31,9 @@ euchreRouter.get('/', (req, res) => {
 
 //render newCrct view
 euchreRouter.get("/circuits/new", (req, res) => {
-  res.render('./circuits/newCrct');
+  playersApi.getAllPlayers().then(players => {
+   res.render('./circuits/newCrct', {players});
+})
 })
 
 //get all circuits
@@ -173,11 +175,18 @@ euchreRouter.put('/resources/:resId', (req, res) => {
   })
 })
 //get updatePlayer form
+// euchreRouter.get('/resources/:resId/edit', (req, res) => {
+  // resourcesApi.getResource(req.params.resId).then(resource => {
+    // res.render('./resources/updateRsrc', {resource});
+  // })
+// })
+
 euchreRouter.get('/resources/:resId/edit', (req, res) => {
-  resourcesApi.getResource(req.params.resId).then(resource => {
-    res.render('./resources/updateRsrc', {resource});
+   resourcesApi.getResource(req.params.resId).then(resource => {
+      res.render('./resources/updateRsrc', {resource});
   })
 })
+
 
 /* Step 6
  * Export the router from the file.

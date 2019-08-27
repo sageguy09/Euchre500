@@ -57,7 +57,9 @@ function deletePlayer(playerId) {
 function updatePlayer(playerId, player) {
   return PlayerCollection.findByIdAndUpdate(playerId, player)
 }
-
+function getPlayersWithResource(resource){
+  return (PlayerCollection.find(), resource)
+}
 
 /* Step 5
  * export all functions from this file by adding their names as keys to this
@@ -68,6 +70,7 @@ module.exports = {
   deletePlayer,
   getAllPlayers,
   getHelloWorldString,
+  getPlayersWithResource,
   getPlayer, 
   getPlayerByName,
   updatePlayer
