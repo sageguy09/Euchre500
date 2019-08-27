@@ -38,10 +38,10 @@ function getHelloWorldString() {
 function getAllResources() {
   return ResourcesCollection.find()
 }
-
 function getResource(resId){
   return ResourcesCollection.findById(resId)
 }
+
 function getResourceByName(resId) {
   return ResourcesCollection.findOne(resId.name)
 }

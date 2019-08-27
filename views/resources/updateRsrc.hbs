@@ -18,5 +18,13 @@
     <input type="submit" value="Save Changes" />
     <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
     <input type="submit" value="Delete"  formaction="/sitemain/resources/{{resource._id}}?_method=DELETE">
+<label for="playersDropdown">playerdropdown</label>
+<input list="players" name="playersDropdown" >
+
+  <datalist id="players" >
+    {{#each players}}
+      <option value="{{playerAlias}}">
+    {{/each}}
+  </datalist>
 </form>
 </div>
