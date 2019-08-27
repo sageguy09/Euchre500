@@ -1,6 +1,6 @@
 # Euchre500
 
-## A web application designed to allow Euchre groups to keep track of there Euchre stats while introducing another competitive aspect: a race to hit an overall score of 500 points!
+## A web application designed to allow Euchre groups to keep track of their Euchre stats over a period of time while introducing another competitive aspect: a race to hit an overall score of 500 points!
 
 How to play:
 
