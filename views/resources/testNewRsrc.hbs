@@ -1,5 +1,15 @@
 <h1>New Resource</h1>
  
+<form action="/action_page.php" method="get">
+  <input list="players" name="playersList">
+  <datalist id="players">
+    {{#each players}}
+                    <option value="{{playerAlias}}">
+                    {{/each}}
+  </datalist>
+  <input type="submit">
+</form>
+
 <div class='resourceDiv'>
 <form class="newCircuit" method="POST" action='/sitemain/resources/'>
 
@@ -27,3 +37,18 @@
     <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
 </form>
 </div>
+
+<wrapper class="playerListDb">
+        <div class="playerListDb">
+            <h3 class="listheader">All Players in Db</h3>
+                <ul>
+                    {{#each players}}
+                    <li>{{playerAlias}}</li>
+                    {{/each}}
+                </ul>
+            <a href="/sitemain/resources/new">Click here to add a euchre learning resource</a>
+        </div>
+    </wrapper>
+   
+   
+  
