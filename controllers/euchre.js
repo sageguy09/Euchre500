@@ -153,7 +153,7 @@ euchreRouter.get('/resources/:resId', (req, res) => {
 //delete resource function
 euchreRouter.delete('/resources/:resId', (req, res) => {
   resourcesApi.deleteResource(req.params.resId).then(deletedResource => {
-    res.redirect('/sitemain/allRsrcs')
+    res.redirect('/sitemain/resources')
   })
 })
 
