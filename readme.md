@@ -9,6 +9,9 @@ How to play:
 3. After each round played, input the round results for each team/player matchup
 4. Click submit to push the current round scores to the Circuit totals
 
+## Application deployed and available via Heroku 
+ [Euchre500 Web App](https://murmuring-garden-47277.herokuapp.com/sitemain/)
+ 
 
 ## Application developement project board available on GitKraken
  [Euchre500_Project_Board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
