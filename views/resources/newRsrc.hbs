@@ -1,4 +1,14 @@
 <h1>New Resource</h1>
+ 
+<form action="/action_page.php" method="get">
+  <input list="players" name="playersList">
+  <datalist id="players">
+    {{#each players}}
+                    <option value="{{playerAlias}}">
+                    {{/each}}
+  </datalist>
+  <input type="submit">
+</form>
 
 <div class='resourceDiv'>
 <form class="newCircuit" method="POST" action='/sitemain/resources/'>
@@ -34,3 +44,6 @@
             <a href="/sitemain/resources/new">Click here to add a euchre learning resource</a>
         </div>
     </wrapper>
+   
+   
+  
