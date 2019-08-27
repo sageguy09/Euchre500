@@ -13,7 +13,7 @@ const teams = [
     'T1', 'T2', 'T3', 'T4', 'T5', 'T6'
 ]
 const valueFields = [
-    'score', 'loaner', 'euchre', 'march', 'wins', 'loss'
+    'score', 'loaner', 'euchre', 'march', 'wins', 'loss', 'total'
 ]
 /*
 function submitRound(){
@@ -87,25 +87,31 @@ setRoundScore();
 function updateScores(p, team){ 
     for (i = 0; i<6; i++){
         let total = 0;
+        let rTotal = 0;
         let pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
+        //let pRTotal = parseFloat(document.getElementById(valueFields[6]+team).value)
         let pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
+
         total += pRScore
+        rTotal += pRScore
         total += pCScore
         //console.log(valueFields[i]+p)
         //this function worked for updating when player set to P1
+        document.getElementById(valueFields[6]+p).value = (rTotal);
         document.getElementById(valueFields[i]+p).value = (total);
         //console.log(total)
     }
 }
 
-function sumTotalRoundScore(){
-
+function sumTotalRoundScore(pRScore){
+    let total = 0;
+    //call this function each time that a value is iterated on updateScores
 }
 
 function setRoundScore (){
     event.preventDefault;
     const initVal = 0;
-    for (i=0; i<6; i++){
+    for (i=0; i<=6; i++){
         
         document.getElementById(valueFields[i]+teams[0]).value = (initVal);
         document.getElementById(valueFields[i]+teams[1]).value = (initVal);
@@ -113,6 +119,7 @@ function setRoundScore (){
         document.getElementById(valueFields[i]+teams[3]).value = (initVal);
         document.getElementById(valueFields[i]+teams[4]).value = (initVal);
         document.getElementById(valueFields[i]+teams[5]).value = (initVal);
+        
         //console.log(valueFields[i]+teams[i])
     };
 }
