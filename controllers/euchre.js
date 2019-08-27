@@ -89,7 +89,7 @@ euchreRouter.get('/circuits/:circuitId/editDetails', (req, res) => {
 euchreRouter.get('/circuits/:circuitId/resumeScoring', (req, res) => {
   circuitsApi.getCircuit(req.params.circuitId).then(circuit => {
     playersApi.getAllPlayers().then(players => {
-    res.render('./circuits/updateCrctupdateCrctScores', {circuit, players});
+    res.render('./circuits/updateCrctScores', {circuit, players});
   })
 })
 })
