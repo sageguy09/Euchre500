@@ -86,9 +86,9 @@ setRoundScore();
    
 function updateScores(p, team){ 
     for (i = 0; i<6; i++){
-        var total = 0;
-        var pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
-        var pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
+        let total = 0;
+        let pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
+        let pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
         total += pRScore
         total += pCScore
         //console.log(valueFields[i]+p)
