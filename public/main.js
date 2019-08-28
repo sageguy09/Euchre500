@@ -122,7 +122,7 @@ function checkScore(){
                 alert("Player has reached 500!"); 
             }
             else {
-                console.log(players[i]+" "+playerScore)
+                
             }
     }
 }
