@@ -1,4 +1,4 @@
-<h1>View Resource Details</h1>
+ <h1 class="allHeader">Update Resource Details</h1>
 
 <div class='resourceDiv'>
 <form class="formAddEdit" method="POST" action='/sitemain/resources/{{resource._id}}?_method=PUT'>
@@ -14,13 +14,12 @@
   <input type="text" value="{{resource.resourceLink}}" name="resourceLink" />
 
    <label for="resourceAddedBy">Added By</label>
-  {{!-- <input type="text" value="{{resource.resourceAddedBy}}" name="resourceAddedBy" /> --}}
-<input list="players" name="playersDropdown" >
-   <datalist id="players" >
-    {{#each players}}
-      <option value="{{playerAlias}}">
-    {{/each}}
-  </datalist>
+    <input list="players" name="playersDropdown" >
+    <datalist id="players" >
+      {{#each players}}
+        <option value="{{playerAlias}}">
+      {{/each}}
+    </datalist>
     <input type="submit" value="Save Changes" />
     <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
     <input type="submit" value="Delete"  formaction="/sitemain/resources/{{resource._id}}?_method=DELETE">
