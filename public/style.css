@@ -4,7 +4,7 @@
 
 body {
   background-color: #DAA45C;
-  opacity: 0.6'
+ 
 }
 
 header {
@@ -13,12 +13,15 @@ header {
   background-position: 10% 85%;
   width: 100wh;
   height: 15vh;
-  margin: 0;
+  margin: -12px;
 }
 
 header h1 {
   color: white;
-  
+  margin: auto;
+  padding-top: 25px;
+  padding-left: 20px;
+  font-size: 40px;
 }
 
 .mainDiv, p{
@@ -29,7 +32,7 @@ header h1 {
 
 .navigation {
   list-style: none;
-  margin:0;
+  margin: -12px ;
   background: #767676;
   color: #1B1B1B;
   display: flex;
@@ -46,6 +49,7 @@ header h1 {
 }
 .navigation a:hover {
   background: darken(lightslategray, 5%);
+  text-decoration: underline;
 }
 
 .table {
@@ -76,7 +80,7 @@ header h1 {
     text-align: center;
   }
   .th[role="rowheader"] {
-    background-color: lightgreen;
+    background-color: #A1BC91;
   }
   .th[role="columnheader"] {
     background-color: #CA4155;
@@ -119,24 +123,27 @@ header h1 {
   border-radius: 4px;
   box-sizing: border-box;
 }
+.formAddEdit, form{
+  background-color: #3E766B;
+}
 
 .formAddEdit, input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #45a049;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  border: 1px solid slategray;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .formAddEdit, input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #3E766B;
 }
 
 .formAddEdit p {
-  background-color: #45a049
+  background-color: #3E766B
 }
 
 .disableElement {
