@@ -16,7 +16,7 @@ How to play:
 
 Edit a circuit:
 1. Selecting "Edit Circuit Details" will open the edit form
-2. Here you can choose to edit players/scores for a circuit as well as delete. 
+2. Here you can choose to edit scores if an error occurs during submitting a round, as well as deleting a circuit. 
 
 Resources:
 Select 'Resources' to review a list of user posted learning resources. 
