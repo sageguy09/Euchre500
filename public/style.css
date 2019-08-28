@@ -60,6 +60,7 @@ header h1 {
   .head {
     display: block;
     text-align: center;
+    background-color: #3E766B;
     margin: 0 auto;
     }
   .tr {
