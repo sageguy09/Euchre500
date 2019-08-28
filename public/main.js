@@ -52,31 +52,32 @@ function updatePlayerScores(){
 for (t = 0; t <= teams.length; t++){
     let team = teams[t]
     if (team == 'T1'){
+        sumTotalRoundScore(team)
         updateScores('P1', team),
         updateScores('P2', team)
     }
     if (team == 'T2'){
-        
+        sumTotalRoundScore(team)
         updateScores('P3', team ),
         updateScores('P4', team )
     }
     if (team == 'T3'){
-        
+        sumTotalRoundScore(team)
         updateScores('P1', team ),
         updateScores('P3', team )
     }
     if (team == 'T4'){
-        
+        sumTotalRoundScore(team)
         updateScores('P2', team ),
         updateScores('P4', team )
     }
     if (team == 'T5'){
-        
+        sumTotalRoundScore(team)
         updateScores('P1', team ),
         updateScores('P4', team )
     }
     if (team == 'T6'){
-        
+        sumTotalRoundScore(team)
         updateScores('P2', team ),
         updateScores('P3', team )
     }
@@ -84,8 +85,18 @@ for (t = 0; t <= teams.length; t++){
 setRoundScore();
 }
    
+function sumTotalRoundScore(team){
+    for (i=0; i<6; i++){
+        let rTotal =0;
+        let tRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
+        let tRTotal = parseFloat(document.getElementById(valueFields[6]+team).value)
+        rTotal += tRScore
+        rTotal += tRTotal
+        document.getElementById(valueFields[6]+team).value = (rTotal);
+    }
+}
 function updateScores(p, team){ 
-    for (i = 0; i<6; i++){
+    for (i = 0; i<=6; i++){
         let total = 0;
         let pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
         let pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
@@ -101,16 +112,7 @@ function updateScores(p, team){
     }
 }
 
-function sumTotalRoundScore(team){
-    for (i=0; i<6; i++){
-        let rTotal =0;
-        let tRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
-        let tRTotal = parseFloat(document.getElementById(valueFields[6]+team).value)
-        rTotal += tRScore
-        rTotal += tRTotal
-        document.getElementById(valueFields[6]+team).value = (rTotal);
-    }
-}
+
 /*let rTotal = 0;
 let pRTotal = parseFloat(document.getElementById(valueFields[6]+team).value)
         rTotal += pRScore
