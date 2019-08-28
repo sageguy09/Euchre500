@@ -338,16 +338,12 @@
             <a href="/sitemain/circuits/new">Click here to add a circuit</a>
         </div>
     </wrapper>
-    <div class="circuitButtons">
-        <button id="start">Start</button>
-        <button id="resume">Resume</button>
-        <button id="save">Save</button>
-        <button id="delete">Delete</button>
-        <button id="start">Add Player</button>
-        <button id="submitRound">Submit Round</button>
+      <div class="circuitButtons">
+        <button id="start" onclick="location.href='/sitemain/circuits/{{circuit._id}}/resumeScoring';">Start/Resume</button>
+        <button id="editDetails" onclick="location.href='/sitemain/circuits/{{circuit._id}}/editDetails';">Edit Circuit Details</button>
+        <button id="start" onclick="location.href='/sitemain/players/new';">Add Player to Site</button>
+        {{!-- <button id="submitRound">Submit Round</button> --}}
     </div>
+
 </container>
 
-<a  href="/sitemain/circuits/{{circuit._id}}/edit">oldEdit Circuit</a>
-<a  href="/sitemain/circuits/{{circuit._id}}/editDetails">Edit Circuit Details(players)</a>
-<a  href="/sitemain/circuits/{{circuit._id}}/resumeScoring">Resume Circuit (scoring)</a>
