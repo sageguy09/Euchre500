@@ -83,6 +83,7 @@ for (t = 0; t <= teams.length; t++){
     }
 }
 setRoundScore();
+checkScore();
 }
    
 function sumTotalRoundScore(team){
@@ -113,7 +114,18 @@ function updateScores(p, team){
 }
 
 
-
+function checkScore(){
+   
+   for (i=0; i<4; i++){
+        let playerScore = parseFloat(document.getElementById(valueFields[6]+players[i]).value)
+            if (playerScore == 500){
+                alert("Player has reached 500!"); 
+            }
+            else {
+                console.log(players[i]+" "+playerScore)
+            }
+    }
+}
 
 
 function setRoundScore (){
