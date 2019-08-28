@@ -143,6 +143,18 @@ function confirmResetRound(){
     }
 }
 
+function confirmDeleteCircuit(){
+    
+    let c = confirm("Are you sure you want to delete this circuit");
+    if (c == true) {
+        return document.getElementById("deleteCircuit").submit();
+    }
+    else {
+        return;
+    }
+}
+
+
 /*
 function submitRound (){
     event.preventDefault();

@@ -102,8 +102,12 @@
             </div>
             <input type="submit" value="Update Circuit" />
             <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/circuits/{{circuit._id}}">
-            <input type="submit" value="Delete"  formaction="/sitemain/circuits/{{circuit._id}}?_method=DELETE">
+            {{!-- <input type="submit" value="Delete"  formaction="/sitemain/circuits/{{circuit._id}}?_method=DELETE"> --}}
+            <input type="submit"  form="deleteCircuit" value="Delete Circuit Test" onclick="confirmDeleteCircuit();" >
           </form>
+          <form id="deleteCircuit" method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=Delete">
+          
+            </form>
         </div>
     </container>
     <container class="circuitBoard disableElement" id="roundScore">
