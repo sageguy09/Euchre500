@@ -1,14 +1,18 @@
-<h1>All Resources</h1>
+<h1 class="allHeader">All Resources</h1>
 
 
-<wrapper class="resourceList">
-        <div class="resourceList">
-            <h3 class="listheader">All Euchre Learning Resources</h3>
-                <ul>
-                    {{#each resources}}
-                    <li><a href="/sitemain/resources/{{_id}}"> {{resourceName}}</a></li>
-                    {{/each}}
-                </ul>
-            <a href="/sitemain/resources/new">Click here to add a euchre learning resource</a>
-        </div>
-    </wrapper>
+
+
+    <container class="allView">
+   
+{{#each resources}}
+    <div class="cardResource" onclick="location.href='/sitemain/resources/{{_id}}';">
+  <div class="cardContainer">
+    <h4><b>{{resourceName}}</b></h4> 
+    <h5>{{resourceDescription}}</h5> 
+  </div>
+</div>
+{{/each}}
+
+</container>
+<a class="allHeader" href="/sitemain/resources/new">Click here to add a resource</a>

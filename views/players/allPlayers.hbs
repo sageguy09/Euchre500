@@ -1,14 +1,18 @@
-<h1>All Players</h1>
 
+ <h1 class="allHeader">All Players</h1>
 
-<wrapper class="playerList">
-        <div class="playerList">
-            <h3 class="listheader">All Players</h3>
-                <ul>
-                    {{#each players}}
-                    <li><a href="/sitemain/players/{{_id}}"> {{playerAlias}}</a></li>
-                    {{/each}}
-                </ul>
-            <a href="/sitemain/players/new">Click here to add a player</a>
-        </div>
-    </wrapper>
+<container class="allView">
+   
+{{#each players}}
+    <div class="card" onclick="location.href='/sitemain/players/{{_id}}';">
+  <img src="https://www.clker.com/cliparts/c/Q/w/T/u/6/jack-card-hi.png" alt="Avatar" style="width:100%">
+  <div class="cardContainer">
+    <h4><b>{{playerAlias}}</b></h4> 
+    <h5>{{location}}</h5> 
+  </div>
+</div>
+{{/each}}
+
+</container>
+
+<a class="allHeader" href="/sitemain/players/new">Click here to add a player</a>

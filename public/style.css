@@ -60,6 +60,7 @@ header h1 {
   .head {
     display: block;
     text-align: center;
+    margin: 0 auto;
     }
   .tr {
     display: flex;
@@ -130,7 +131,7 @@ header h1 {
 
 .formAddEdit, input[type=submit] {
   width: 100%;
-  background-color: #45a049;
+  background-color: #A1BC91;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -151,4 +152,58 @@ header h1 {
   pointer-events: none;
   filter: alpha(opacity=80);
   opacity: 0.8;
+}
+
+.allView {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100px;
+  border: black;
+  border-radius: 5px;
+  background-color: #3E766B;
+  align-self: flex-start;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #A1BC91;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.cardContainer {
+  text-align: center;
+  padding: 2px 16px;
+}
+.allview, a {
+  margin: 10px;
+  align-self: flex-end;
+}
+
+.cardResource {
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 200px;
+  border: black;
+  border-radius: 5px;
+  background-color: #3E766B;
+  align-self: flex-start;
+}
+
+.allHeader {
+  text-align: center;
+  display: block;
+  align-content: center
 }
