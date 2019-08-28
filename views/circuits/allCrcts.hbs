@@ -5,7 +5,7 @@
             aria-describedby="caption" class="table" role="grid"
         >
         
-            <h1 class="head"><a href="/sitemain/circuits/new"> Create a circuit</a> or choose one from the Circuits sidebar</h1>
+            <h1 class="head"><a href="/sitemain/circuits/new"> Create a circuit</a> or choose one from the Circuits below</h1>
             <div class="tr" role="row">
         
                 <div class="th" role="columnheader">
@@ -61,7 +61,7 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
-                (player1)
+                (player2)
                 </div>
                 <div class="td" role="gridcell">
                 
@@ -87,7 +87,7 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
-                (player1)
+                (player3)
                 </div>
                 <div class="td" role="gridcell">
                 
@@ -113,7 +113,7 @@
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
-                (player1)
+                (player4)
                 </div>
                 <div class="td" role="gridcell">
                 
@@ -328,16 +328,17 @@
                 </div>
             </div>
         </div>
-    </container>
-    <wrapper class="sideList">
-        <div class="circuitList">
-            <h3 class="listheader">All Circuits</h3>
-                <ul>
-                    {{#each circuits}}
-                    <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
-                    {{/each}}
-                </ul>
-            <a href="/sitemain/circuits/new">Click here to add a circuit</a>
-        </div>
-    </wrapper>
+  <h2 class="allHeader">All Circuits</h2>
+<container class="allView">
+       
+{{#each circuits}}
+
+    <div class="cardResource" onclick="location.href='/sitemain/circuits/{{_id}}';">
+  <div class="cardContainer">
+    <h4><b>{{crctName}}</b></h4> 
+  </div>
+</div>
+{{/each}}
+
 </container>
+<a class="allHeader" href="/sitemain/circuits/new">Click here to add a circuit</a>
