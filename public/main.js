@@ -15,6 +15,9 @@ const teams = [
 const valueFields = [
     'score', 'loaner', 'euchre', 'march', 'wins', 'loss', 'total'
 ]
+const cvalueFields = [
+    'cscore', 'cloaner', 'ceuchre', 'cmarch', 'cwins', 'closs', 'ctotal'
+]
 /*
 function submitRound(){
     event.preventDefault();
@@ -100,15 +103,15 @@ function updateScores(p, team){
     for (i = 0; i<=6; i++){
         let total = 0;
         let pRScore = parseFloat(document.getElementById(valueFields[i]+team).value);
-        let pCScore = parseFloat(document.getElementById(valueFields[i]+p).value)
+        let pCScore = parseFloat(document.getElementById(cvalueFields[i]+p).value)
         total += pRScore
         total += pCScore
 
         //console.log(valueFields[i]+p)
         //this function worked for updating when player set to P1
+        console.log(cvalueFields[i])
         
-        
-        document.getElementById(valueFields[i]+p).value = (total);
+        document.getElementById(cvalueFields[i]+p).value = (total);
         //console.log(total)
     }
 }
@@ -117,7 +120,7 @@ function updateScores(p, team){
 function checkScore(){
    
    for (i=0; i<4; i++){
-        let playerScore = parseFloat(document.getElementById(valueFields[6]+players[i]).value)
+        let playerScore = parseFloat(document.getElementById(cvalueFields[6]+players[i]).value)
             if (playerScore == 500){
                 alert("Player has reached 500!"); 
             }
