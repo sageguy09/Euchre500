@@ -200,17 +200,7 @@
       </form>   
     {{!-- End of roundScoring container --}}
     </container>
-    <wrapper class="sideList">
-        <div class="circuitList">
-            <h3 class="listheader">All Circuits</h3>
-                <ul>
-                    {{#each circuits}}
-                    <li><a href="/sitemain/circuits/{{_id}}"> {{crctName}}</a></li>
-                    {{/each}}
-                </ul>
-            <a href="/sitemain/circuits/new">Click here to add a circuit</a>
-        </div>
-    </wrapper>
+
     <div class="circuitButtons">
         <button id="start" onclick="location.href='/sitemain/circuits/{{circuit._id}}/resumeScoring';">Start/Resume Scoring</button>
         <button id="editDetails" onclick="location.href='/sitemain/circuits/{{circuit._id}}/editDetails';">Edit Circuit Details</button>
