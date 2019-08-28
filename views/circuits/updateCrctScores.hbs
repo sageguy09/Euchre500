@@ -5,7 +5,7 @@
         <div aria-label="circuit"
             aria-describedby="caption" class="table" role="grid"
         >
-          <form method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=PUT">
+          <form id="updateCircuit" method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=PUT">
             <h1 class="head">{{circuit.crctName}}</h1>
             <div class="tr" role="row">
         
@@ -81,9 +81,6 @@
                     <input class="td" role="gridcell" type="number" id="winsP4" value="{{circuit.winsP4}}" name="winsP4"readonly>
                      <input class="td" role="gridcell" type="number" id="lossP4" value="{{circuit.lossP4}}" name="lossP4"readonly>
                      <input class="td" role="gridcell" type="number" id="totalP4" value="{{circuit.totalP4}}" name="totalP4"readonly>
-            </div>
-            <div>
-            <input type="submit" form="updateDetails"  value="Update Circuit" />
             </div>
           </form>
         </div>
@@ -195,7 +192,8 @@
             </div>
         </div>
         <input type="submit" id="subRound" value="Submit Round" onclick="submitRound();" >
-        <input type="submit" id="subReset" value="Reset Round Table" onclick="confirmResetRound();" >
+        <input type="submit" id="subReset" value="Reset Round Scoring values" onclick="confirmResetRound();" >
+        <input type="submit" form="updateCircuit"  value="Save Circuit" />
         
       {{!-- End of roundScoring form --}}
       </form>   
