@@ -16,8 +16,8 @@
    <label for="PlayerCreatedBy">User added by</label>
   <input type="text" value="{{player.PlayerCreatedBy}}" name="PlayerCreatedBy" />
 
-   <label for="playerUid">PlayerUid</label>
-  <input type="text" value="{{player.playerUid}}" name="playerUid" />
+  <label for="playerUid" hidden>PlayerUid</label> 
+  <input  type="hidden" placeholder="autogenerate" name="playerUid"  />
     <input type="submit" value="Edit Player" />
 </form>
 </div>
