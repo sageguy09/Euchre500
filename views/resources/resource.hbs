@@ -1,20 +1,21 @@
 <h1>View Resource Details</h1>
 
 <div class='resourceDiv'>
-<form class="formAddEdit" method="GET" action='/sitemain/resources/{{resource._id}}/edit'>
+<form class="formAddEdit" id="rsrcAddEdit" method="GET" action='/sitemain/resources/{{resource._id}}/edit'>
 
  {{!-- player name/id --}}
   <label for="resourceName">Resource Title</label>
-  <input type="text" value="{{resource.resourceName}}" name="resourceName" />
+  <input type="text" value="{{resource.resourceName}}" name="resourceName" readonly />
 {{!-- player names --}}
   <label for="resourceDescription">Description</label>
-  <input type="text" value="{{resource.resourceDescription}}" name="resourceDescription" />
+  <input type="text" value="{{resource.resourceDescription}}" name="resourceDescription" readonly/>
 
   <label for="resourceLink">Link to resource</label>
-  <input type="text" value="{{resource.resourceLink}}" name="resourceLink" />
+  <input type="text" value="{{resource.resourceLink}}" name="resourceLink" readonly/>
 
    <label for="resourceAddedBy">Added By</label>
-  <input type="text" value="{{resource.resourceAddedBy}}" name="resourceAddedBy" />
-    <input type="submit" value="Edit Resource" />
+  <input type="text" value="{{resource.resourceAddedBy}}" name="resourceAddedBy" readonly/>
+    <input type="submit" form="rsrcAddEdit" value="Edit Resource" />
+    <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/resources">
 </form>
 </div>

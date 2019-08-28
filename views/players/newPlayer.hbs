@@ -1,7 +1,7 @@
 <h1>New Player</h1>
 
 <div class='playerDiv'>
-<form class="formAddEdit" method="POST" action='/sitemain/players/'>
+<form class="formAddEdit" id="playerAddEdit" method="POST" action='/sitemain/players/'>
 
  {{!-- player name/id --}}
   <label for="playerAlias">Player Username</label>
@@ -16,9 +16,9 @@
    <label for="PlayerCreatedBy">User added by</label>
   <input type="text" placeholder="Enter add user's username" name="PlayerCreatedBy" />
 
-   <label for="playerUid">PlayerUid</label>
-  <input type="text" placeholder="autogenerate" name="playerUid" />
-    <input type="submit" value="Create Player" />
-    <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/players">
+   <label for="playerUid" hidden>PlayerUid</label> 
+  <input  type="hidden" placeholder="autogenerate" name="playerUid"  />
+    <input type="submit" form="playerAddEdit" value="Create Player" />
+    <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/players" >
 </form>
 </div>
