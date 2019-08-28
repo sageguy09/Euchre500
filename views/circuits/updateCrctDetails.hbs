@@ -1,12 +1,10 @@
-<h1>Resume Circuit {{circuit._id}}</h1>
-
 <container class="circuitsMain" "clearfix">
     <container class="circuitBoard" id="circuitScore">
         <div aria-label="circuit"
             aria-describedby="caption" class="table" role="grid"
         >
-          <form method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=PUT">
-            <h1 class="head">{{circuit.crctName}}</h1>
+          <form method="POST" id="updateDetails" action="/sitemain/circuits/{{circuit._id}}?_method=PUT">
+            <h1 class="head">Edit Circuit: {{circuit.crctName}} Details</h1>
             <div class="tr" role="row">
         
                 <div class="th" role="columnheader">
@@ -36,7 +34,12 @@
             </div>
             <div class="tr" role="row" >
                 <div class="th" role="rowheader" id="nameP1">
-                {{circuit.nameP1}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP1" value="{{circuit.scoreP1}}" name="scoreP1">
                  <input class="td" role="gridcell" type="number" id="loanerP1" value="{{circuit.loanerP1}}" name="loanerP1">
@@ -44,13 +47,16 @@
                    <input class="td" role="gridcell" type="number" id="marchP1" value="{{circuit.marchP1}}" name="marchP1">
                     <input class="td" role="gridcell" type="number" id="winsP1" value="{{circuit.winsP1}}" name="winsP1">
                      <input class="td" role="gridcell" type="number" id="lossP1" value="{{circuit.lossP1}}" name="lossP1">
-                <div class="td" role="gridcell" id="totalP1">
-                {{circuit.totalP1}}
-                </div>
+                        <input class="td" role="gridcell" type="number" id="totalP1" value="{{circuit.totalP1}}" name="totalP1"> 
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP2">
-                {{circuit.nameP2}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP2" value="{{circuit.scoreP2}}" name="scoreP2">
                  <input class="td" role="gridcell" type="number" id="loanerP2" value="{{circuit.loanerP2}}" name="loanerP2">
@@ -58,13 +64,16 @@
                    <input class="td" role="gridcell" type="number" id="marchP2" value="{{circuit.marchP2}}" name="marchP2">
                     <input class="td" role="gridcell" type="number" id="winsP2" value="{{circuit.winsP2}}" name="wins2">
                      <input class="td" role="gridcell" type="number" id="lossP2" value="{{circuit.lossP2}}" name="lossP2">
-                <div class="td" role="gridcell" id="totalP2">
-                {{circuit.totalP2}}
-                </div>
+                        <input class="td" role="gridcell" type="number" id="totalP2" value="{{circuit.totalP2}}" name="totalP2"> 
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP3">
-                {{circuit.nameP3}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP3" value="{{circuit.scoreP3}}" name="scoreP3">
                  <input class="td" role="gridcell" type="number" id="loanerP3" value="{{circuit.loanerP3}}" name="loanerP3">
@@ -72,13 +81,16 @@
                    <input class="td" role="gridcell" type="number" id="marchP3" value="{{circuit.marchP3}}" name="marchP3">
                     <input class="td" role="gridcell" type="number" id="winsP3" value="{{circuit.winsP3}}" name="winsP3">
                      <input class="td" role="gridcell" type="number" id="lossP3" value="{{circuit.lossP3}}" name="lossP3">
-                <div class="td" role="gridcell" id="totalP3">
-                {{circuit.totalP3}}
-                </div>
+                        <input class="td" role="gridcell" type="number" id="totalP3" value="{{circuit.totalP3}}" name="totalP3"> 
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader" id="nameP4">
-                {{circuit.nameP4}}
+                <input list="players" name="playersDropdown" >
+                    <datalist id="players" >
+                        {{#each players}}
+                        <option value="{{playerAlias}}">
+                        {{/each}}
+                    </datalist>
                 </div>
                 <input class="td" role="gridcell" type="number" id="scoreP4" value="{{circuit.scoreP4}}" name="scoreP4">
                  <input class="td" role="gridcell" type="number" id="loanerP4" value="{{circuit.loanerP4}}"name="loanerP4">
@@ -86,15 +98,19 @@
                    <input class="td" role="gridcell" type="number" id="marchP4" value="{{circuit.marchP4}}" name="marchP4">
                     <input class="td" role="gridcell" type="number" id="winsP4" value="{{circuit.winsP4}}" name="winsP4">
                      <input class="td" role="gridcell" type="number" id="lossP4" value="{{circuit.lossP4}}" name="lossP4">
-                <div class="td" role="gridcell" id="totalP4">
-                {{circuit.totalP4}}
-                </div>
+                        <input class="td" role="gridcell" type="number" id="totalP4" value="{{circuit.totalP4}}" name="totalP4"> 
             </div>
             <input type="submit" value="Update Circuit" />
+            <input type="submit" value="Cancel" formmethod="GET" formaction="/sitemain/circuits/{{circuit._id}}">
+            {{!-- <input type="submit" value="Delete"  formaction="/sitemain/circuits/{{circuit._id}}?_method=DELETE"> --}}
+            <input type="submit"  form="deleteCircuit" value="Delete Circuit Test" onclick="confirmDeleteCircuit();" >
           </form>
+          <form id="deleteCircuit" method="POST" action="/sitemain/circuits/{{circuit._id}}?_method=Delete">
+          
+            </form>
         </div>
     </container>
-    <container class="circuitBoard" id="roundScore">
+    <container class="circuitBoard disableElement" id="roundScore">
       <form name="teamInputs" id="teamInputsfrm" action="#">
         <div aria-label="circuit"
             aria-describedby="caption" class="table" role="grid"
@@ -128,9 +144,9 @@
                 </div>
             </div>
             <div class="tr" role="row">
-                <div class="th" role="rowheader">
+                <div class="th" role="rowheader" >
                 <input name="team1" type="checkbox" id="boxT1"/>
-                <label for="team1" >(team1):P1+P2</label>
+                <label for="team1" >Team1:P1+P2</label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT1" type ="number" id="scoreT1" value="0"/>
                 <input class="td" role="gridcell" name="loanerT1" type ="number" id="loanerT1" value="0"/>
@@ -138,14 +154,12 @@
                 <input class="td" role="gridcell" name="marchT1" type ="number" id="marchT1" value="0"/>
                 <input class="td" role="gridcell" name="winsT1" type ="number" id="winsT1" value="0"/>
                 <input class="td" role="gridcell" name="lossT1" type ="number" id="lossT1" value="0"/>
-                <div class="td" role="gridcell">
-                
-                </div>
+                <input class="td" role="gridcell" name="totalT1" type ="number" id="totalT1" value="0"/>
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
                   <input name="team2" type="checkbox" id="boxT2"/>
-                  <label for="team2" >(team2):P3+P4</label>
+                  <label for="team2" >Team2:P3+P4</label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT2" type ="number" id="scoreT2" value="0"/>
                 <input class="td" role="gridcell" name="loanerT2" type ="number" id="loanerT2" value="0"/>
@@ -153,14 +167,12 @@
                 <input class="td" role="gridcell" name="marchT2" type ="number" id="marchT2" value="0"/>
                 <input class="td" role="gridcell" name="winsT2" type ="number" id="winsT2" value="0"/>
                 <input class="td" role="gridcell" name="lossT2" type ="number" id="lossT2" value="0"/>
-                <div class="td" role="gridcell">
-                
-                </div>
+                <input class="td" role="gridcell" name="totalT2" type ="number" id="totalT2" value="0"/>
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
                 <input name="team3" type="checkbox" id="boxT3"/>
-                  <label for="team3" >(team3):P1+P3</label>
+                  <label for="team3" >Team3:P1+P3</label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT3" type ="number" id="scoreT3" value="0"/>
                 <input class="td" role="gridcell" name="loanerT3" type ="number" id="loanerT3" value="0"/>
@@ -168,14 +180,12 @@
                 <input class="td" role="gridcell" name="marchT3" type ="number" id="marchT3" value="0"/>
                 <input class="td" role="gridcell" name="winsT3" type ="number" id="winsT3" value="0"/>
                 <input class="td" role="gridcell" name="lossT3" type ="number" id="lossT3" value="0"/>
-                <div class="td" role="gridcell">
-                
-                </div>
+                <input class="td" role="gridcell" name="totalT3" type ="number" id="totalT3" value="0"/>
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
                 <input name="team4" type="checkbox" id="boxT4"/>
-                  <label for="team4" >(team4):P2+P4</label>
+                  <label for="team4" >Team4:P2+P4 </label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT4" type ="number" id="scoreT4" value="0"/>
                 <input class="td" role="gridcell" name="loanerT4" type ="number" id="loanerT4" value="0"/>
@@ -183,13 +193,12 @@
                 <input class="td" role="gridcell" name="marchT4" type ="number" id="marchT4" value="0"/>
                 <input class="td" role="gridcell" name="winsT4" type ="number" id="winsT4" value="0"/>
                 <input class="td" role="gridcell" name="lossT4" type ="number" id="lossT4" value="0"/>
-                <div class="td" role="gridcell">
-                </div>
+                <input class="td" role="gridcell" name="totalT4" type ="number" id="totalT4" value="0"/>
             </div>
             <div class="tr" role="row">
                 <div class="th" role="rowheader">
                 <input name="team5" type="checkbox" id="boxT5"/>
-                  <label for="team5" >(team5):P1+P4</label>
+                  <label for="team5" >Team5:P1+P4</label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT5" type ="number" id="scoreT5" value="0"/>
                 <input class="td" role="gridcell" name="loanerT5" type ="number" id="loanerT5" value="0"/>
@@ -197,14 +206,12 @@
                 <input class="td" role="gridcell" name="marchT5" type ="number" id="marchT5" value="0"/>
                 <input class="td" role="gridcell" name="winsT5" type ="number" id="winsT5" value="0"/>
                 <input class="td" role="gridcell" name="lossT5" type ="number" id="lossT5"value="0"/>
-                <div class="td" role="gridcell">
-                
-                </div>
+                <input class="td" role="gridcell" name="totalT5" type ="number" id="totalT5" value="0"/>
             </div>
             <div class="tr" role="row">
               <div class="th" role="rowheader">
                 <input name="team6" type="checkbox" id="boxT6"/>
-                  <label for="team6" >(team6):P2+P3</label>
+                  <label for="team6" >Team6:P2+P3</label>
                 </div>
                 <input class="td" role="gridcell" name="scoreT6" type ="number" id="scoreT6" value="0"/>
                 <input class="td" role="gridcell" name="loanerT6" type ="number" id="loanerT6" value="0"/>
@@ -212,12 +219,10 @@
                 <input class="td" role="gridcell" name="marchT6" type ="number" id="marchT6" value="0"/>
                 <input class="td" role="gridcell" name="winsT6" type ="number" id="winsT6" value="0"/>
                 <input class="td" role="gridcell" name="lossT6" type ="number" id="lossT6" value="0"/>
-                <div class="td" role="gridcell">
-                
-                </div>
+                <input class="td" role="gridcell" name="totalT6" type ="number" id="totalT6" value="0"/>
             </div>
         </div>
-        <input type="submit" id="subRound" value="Submit Round" onclick="submitRound();" >
+        {{!-- <input type="submit" id="subRound" value="Submit Round" onclick="submitRound();" disabled > --}}
       {{!-- End of roundScoring form --}}
       </form>   
     {{!-- End of roundScoring container --}}
@@ -241,6 +246,8 @@
         <button id="start">Add Player</button>
         {{!-- <button id="submitRound">Submit Round</button> --}}
     </div>
-
+<a  href="/sitemain/circuits/{{circuit._id}}/edit">oldEdit Circuit</a>
+<a  href="/sitemain/circuits/{{circuit._id}}/editDetails">Edit Circuit Details(players)</a>
+<a  href="/sitemain/circuits/{{circuit._id}}/resumeScoring">Resume Circuit (scoring)</a>
 </container>
 
