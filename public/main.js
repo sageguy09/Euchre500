@@ -113,19 +113,9 @@ function updateScores(p, team){
 }
 
 
-/*let rTotal = 0;
-let pRTotal = parseFloat(document.getElementById(valueFields[6]+team).value)
-        rTotal += pRScore
-        rTotal += pRTotal;
-console.log(team+"value="+rTotal)
-*/
-/*
-function sumTotalRoundScore(tRTotal, p){
-    document.getElementById(valueFields[6]+p).value = (tRTotal);
-    //call this function each time that a value is iterated on updateScores
-    //document.getElementById((valueFields[6]+team).value = (rTotal));
-}
-*/
+
+
+
 function setRoundScore (){
     event.preventDefault;
     const initVal = 0;

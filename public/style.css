@@ -46,6 +46,7 @@ header h1 {
     }
   .tr {
     display: flex;
+    border-style: bold;
   }
   
   .th, .td {
@@ -54,6 +55,20 @@ header h1 {
     padding: px 8px;
     flex: 1;
   }
+
+  #td1 {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    padding: px 8px;
+    flex: 1;
+    background: slategrey;
+    opacity: 0.4;
+    
+  }
+  .hideRow {
+    visibility: hidden;
+  }
+
   
   
   .th {
