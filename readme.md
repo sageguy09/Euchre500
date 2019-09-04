@@ -2,6 +2,15 @@
 
 ## A web application designed to allow Euchre groups to keep track of their long terms stats, while introducing another competitive aspect: a race to hit an overall score of 500 points!
 
+
+## Application deployed and available via Heroku 
+ [Euchre500 Web App](https://murmuring-garden-47277.herokuapp.com/sitemain/)
+ 
+
+## Application developement project board available on GitKraken
+ [Euchre500_Project_Board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
+ 
+
 ## Concept Idea
 This web app concept stemmed from a group of friends that enjoyed playing Euchre almost daily. The idea to begin keeping track of stats/scores lead to a spreadsheet of round scores. Eventually this manifested into a full-blown tournament series where scores, loaners, marches, and euchres were being counted to reach the eventual 500 points to win the tourney. 
 Big thanks to Dana, Tyler, Max, and Wes for enthusiastically supporting the developement of this app.
@@ -22,13 +31,6 @@ Resources:
 Select 'Resources' to review a list of user posted learning resources. 
 
 
-## Application deployed and available via Heroku 
- [Euchre500 Web App](https://murmuring-garden-47277.herokuapp.com/sitemain/)
- 
-
-## Application developement project board available on GitKraken
- [Euchre500_Project_Board](https://app.gitkraken.com/glo/board/XV3dFMO-fAAVrYmb)
- 
  ## Page concept wireframe and entity relationship diagrams
  
  ![Circuit WireFrame](https://imgur.com/GnwKj62.jpg)
